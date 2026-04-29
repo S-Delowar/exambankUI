@@ -1,0 +1,2630 @@
+{
+  "source_filename": "DU-2021-2022-A-Unit.pdf",
+  "page_count": 6,
+  "questions": [
+    {
+      "university_name": "Dhaka University",
+      "exam_session": "2021-2022",
+      "exam_unit": "A",
+      "subject": "physics",
+      "chapter": "current_electricity",
+      "question_number": "01",
+      "question_text": "একটি ব্যাটারির মধ্যে তড়িৎ প্রবাহ $i$ দ্বারা প্রকাশ করা হয়। ঐ ব্যাটারির তড়িৎচালক বল, এর দুই প্রান্তের বিভব পার্থক্যের সমান কখন হবে?",
+      "options": [
+        {
+          "label": "A",
+          "text": "সবসময়",
+          "image_filename": null
+        },
+        {
+          "label": "B",
+          "text": "কখনোই না",
+          "image_filename": null
+        },
+        {
+          "label": "C",
+          "text": "শুধুমাত্র যখন $i = 0$",
+          "image_filename": null
+        },
+        {
+          "label": "D",
+          "text": "শুধুমাত্র যখন $i = \\text{ধ্রুবক}$",
+          "image_filename": null
+        }
+      ],
+      "correct_answer": "C",
+      "images": [],
+      "question_region": {
+        "page_index": 0,
+        "box_2d": [
+          144,
+          18,
+          238,
+          492
+        ]
+      }
+    },
+    {
+      "university_name": "Dhaka University",
+      "exam_session": "2021-2022",
+      "exam_unit": "A",
+      "subject": "physics",
+      "chapter": "physical_optics",
+      "question_number": "02",
+      "question_text": "ইয়ং-এর দ্বি-চিড় পরীক্ষায় চিড়-দ্বয়ের মধ্যবর্তী দূরত্ব দ্বিগুণ করা হলো। পর্দার প্রতি একক দৈর্ঘ্যে উজ্জ্বল ডোরার সংখ্যা স্থির রাখতে হলে চিড় থেকে পর্দার দূরত্ব $D$ কে কীভাবে পরিবর্তন করতে হবে?",
+      "options": [
+        {
+          "label": "A",
+          "text": "$\\frac{D}{2}$",
+          "image_filename": null
+        },
+        {
+          "label": "B",
+          "text": "$\\sqrt{2}D$",
+          "image_filename": null
+        },
+        {
+          "label": "C",
+          "text": "$2D$",
+          "image_filename": null
+        },
+        {
+          "label": "D",
+          "text": "$\\frac{D}{\\sqrt{2}}$",
+          "image_filename": null
+        }
+      ],
+      "correct_answer": "C",
+      "images": [],
+      "question_region": {
+        "page_index": 0,
+        "box_2d": [
+          342,
+          18,
+          435,
+          492
+        ]
+      }
+    },
+    {
+      "university_name": "Dhaka University",
+      "exam_session": "2021-2022",
+      "exam_unit": "A",
+      "subject": "physics",
+      "chapter": "semiconductor_and_electronics",
+      "question_number": "03",
+      "question_text": "একটি ব্রিজ রেক্টিফায়ার বর্তনীর ইনপুট সংকেতের কম্পাঙ্ক $50\\,\\text{Hz}$ হলে এর আউটপুট সংকেতের কম্পাঙ্ক কত হবে?",
+      "options": [
+        {
+          "label": "A",
+          "text": "$220\\,\\text{Hz}$",
+          "image_filename": null
+        },
+        {
+          "label": "B",
+          "text": "$50\\,\\text{Hz}$",
+          "image_filename": null
+        },
+        {
+          "label": "C",
+          "text": "$25\\,\\text{Hz}$",
+          "image_filename": null
+        },
+        {
+          "label": "D",
+          "text": "$100\\,\\text{Hz}$",
+          "image_filename": null
+        }
+      ],
+      "correct_answer": "D",
+      "images": [],
+      "question_region": {
+        "page_index": 0,
+        "box_2d": [
+          560,
+          18,
+          612,
+          492
+        ]
+      }
+    },
+    {
+      "university_name": "Dhaka University",
+      "exam_session": "2021-2022",
+      "exam_unit": "A",
+      "subject": "physics",
+      "chapter": "introduction_to_modern_physics",
+      "question_number": "04",
+      "question_text": "একটি বস্তুকণার মোট শক্তি এর স্থির ভর শক্তির দ্বিগুণ। আলোর দ্রুতি $c$ হলে, কণাটির দ্রুতি কত?",
+      "options": [
+        {
+          "label": "A",
+          "text": "$\\frac{2c}{\\sqrt{3}}$",
+          "image_filename": null
+        },
+        {
+          "label": "B",
+          "text": "$\\frac{\\sqrt{3}}{2}c$",
+          "image_filename": null
+        },
+        {
+          "label": "C",
+          "text": "$c$",
+          "image_filename": null
+        },
+        {
+          "label": "D",
+          "text": "$2c$",
+          "image_filename": null
+        }
+      ],
+      "correct_answer": "B",
+      "images": [],
+      "question_region": {
+        "page_index": 0,
+        "box_2d": [
+          669,
+          18,
+          736,
+          492
+        ]
+      }
+    },
+    {
+      "university_name": "Dhaka University",
+      "exam_session": "2021-2022",
+      "exam_unit": "A",
+      "subject": "physics",
+      "chapter": "structural_properties_of_matter",
+      "question_number": "05",
+      "question_text": "বৃষ্টির একটি বড় ফোঁটা ভেঙে অনেকগুলো ছোট ফোঁটায় পরিণত হলে, বড় ফোঁটাটির তুলনায় ছোট ফোঁটাগুলোর সমষ্টিগত ক্ষেত্রফল—",
+      "options": [
+        {
+          "label": "A",
+          "text": "হ্রাস পাবে",
+          "image_filename": null
+        },
+        {
+          "label": "B",
+          "text": "বৃদ্ধি পাবে",
+          "image_filename": null
+        },
+        {
+          "label": "C",
+          "text": "অপরিবর্তিত থাকবে",
+          "image_filename": null
+        },
+        {
+          "label": "D",
+          "text": "কোনোটিই নয়",
+          "image_filename": null
+        }
+      ],
+      "correct_answer": "B",
+      "images": [],
+      "question_region": {
+        "page_index": 0,
+        "box_2d": [
+          123,
+          500,
+          188,
+          972
+        ]
+      }
+    },
+    {
+      "university_name": "Dhaka University",
+      "exam_session": "2021-2022",
+      "exam_unit": "A",
+      "subject": "physics",
+      "chapter": "periodic_motion",
+      "question_number": "06",
+      "question_text": "$m$ ভরের একটি বস্তু একটি অনুভূমিক স্প্রিং-এর সাথে সংযুক্ত আছে, স্প্রিংটি $A$ পরিমাণ প্রসারিত করে ছেড়ে দেওয়া হলে এটি $T$ পর্যায়কাল নিয়ে ঘর্ষণবিহীন তলে স্পন্দিত হতে থাকল। যদি বস্তুর ভর $4m$ করা হয় তবে নতুন পর্যায়কাল কত হবে?",
+      "options": [
+        {
+          "label": "A",
+          "text": "$2T$",
+          "image_filename": null
+        },
+        {
+          "label": "B",
+          "text": "$T$",
+          "image_filename": null
+        },
+        {
+          "label": "C",
+          "text": "$4T$",
+          "image_filename": null
+        },
+        {
+          "label": "D",
+          "text": "$T/4$",
+          "image_filename": null
+        }
+      ],
+      "correct_answer": "A",
+      "images": [],
+      "question_region": {
+        "page_index": 0,
+        "box_2d": [
+          263,
+          500,
+          346,
+          972
+        ]
+      }
+    },
+    {
+      "university_name": "Dhaka University",
+      "exam_session": "2021-2022",
+      "exam_unit": "A",
+      "subject": "physics",
+      "chapter": "work_energy_and_power",
+      "question_number": "07",
+      "question_text": "একটি সুতার একপ্রান্তে একটি বস্তুকে বেঁধে উলম্বভাবে বৃত্তাকার পথে ঘুরানো হচ্ছে। বৃত্তের সর্বোচ্চ বিন্দুতে বস্তুটির বেগ $\\sqrt{3gr}$ ($r = \\text{বৃত্তের ব্যাসার্ধ এবং } g \\text{ অভিকর্ষজ ত্বরণ}$) হলে, বৃত্তের সর্বোচ্চ এবং সর্বনিম্ন বিন্দুতে সুতার টানের অনুপাত কত হবে? [IMAGE_1]",
+      "options": [
+        {
+          "label": "A",
+          "text": "$1:2$",
+          "image_filename": null
+        },
+        {
+          "label": "B",
+          "text": "$1:8$",
+          "image_filename": null
+        },
+        {
+          "label": "C",
+          "text": "$1:4$",
+          "image_filename": null
+        },
+        {
+          "label": "D",
+          "text": "$1:7$",
+          "image_filename": null
+        }
+      ],
+      "correct_answer": "C",
+      "images": [
+        {
+          "id": "IMAGE_1",
+          "kind": "diagram",
+          "caption_hint": null,
+          "label": "circular_motion_diagram",
+          "page_index": 0,
+          "box_2d": null,
+          "markdown": null,
+          "filename": null,
+          "extraction_status": "pending",
+          "review_notes": null
+        }
+      ],
+      "question_region": {
+        "page_index": 0,
+        "box_2d": [
+          430,
+          500,
+          515,
+          972
+        ]
+      }
+    },
+    {
+      "university_name": "Dhaka University",
+      "exam_session": "2021-2022",
+      "exam_unit": "A",
+      "subject": "physics",
+      "chapter": "vector",
+      "question_number": "08",
+      "question_text": "একটি $3$ মানের ভেক্টরকে একটি $4$ মানের ভেক্টরের সাথে যোগ করলে লব্ধি ভেক্টরের মান নিচের কোনটি হবে না?",
+      "options": [
+        {
+          "label": "A",
+          "text": "$0$",
+          "image_filename": null
+        },
+        {
+          "label": "B",
+          "text": "$1$",
+          "image_filename": null
+        },
+        {
+          "label": "C",
+          "text": "$3$",
+          "image_filename": null
+        },
+        {
+          "label": "D",
+          "text": "$5$",
+          "image_filename": null
+        }
+      ],
+      "correct_answer": "A",
+      "images": [],
+      "question_region": {
+        "page_index": 0,
+        "box_2d": [
+          779,
+          500,
+          827,
+          972
+        ]
+      }
+    },
+    {
+      "university_name": "Dhaka University",
+      "exam_session": "2021-2022",
+      "exam_unit": "A",
+      "subject": "physics",
+      "chapter": "current_electricity",
+      "question_number": "09.",
+      "question_text": "$6\\,\\Omega$ এবং $12\\,\\Omega$ মানের দুইটি রোধ সমান্তরালে সংযুক্ত আছে। এই সমান্তরাল সংযোগকে একটি $4\\,\\Omega$ মানের রোধ এবং $24\\,\\text{V}$ ব্যাটারির সাথে সিরিজে সংযুক্ত করা হলো। উক্ত সংযোগে $6\\,\\Omega$ রোধের ভিতরে প্রবাহিত তড়িৎ-এর পরিমাণ কত?",
+      "options": [
+        {
+          "label": "A",
+          "text": "$2\\,\\text{A}$",
+          "image_filename": null
+        },
+        {
+          "label": "B",
+          "text": "$3\\,\\text{A}$",
+          "image_filename": null
+        },
+        {
+          "label": "C",
+          "text": "$6\\,\\text{A}$",
+          "image_filename": null
+        },
+        {
+          "label": "D",
+          "text": "$12\\,\\text{A}$",
+          "image_filename": null
+        }
+      ],
+      "correct_answer": "A",
+      "images": [
+        {
+          "id": "IMAGE_1",
+          "kind": "diagram",
+          "caption_hint": null,
+          "label": "circuit_diagram",
+          "page_index": 1,
+          "box_2d": null,
+          "markdown": null,
+          "filename": null,
+          "extraction_status": "pending",
+          "review_notes": null
+        }
+      ],
+      "question_region": {
+        "page_index": 0,
+        "box_2d": [
+          64,
+          46,
+          378,
+          484
+        ]
+      }
+    },
+    {
+      "university_name": "Dhaka University",
+      "exam_session": "2021-2022",
+      "exam_unit": "A",
+      "subject": "physics",
+      "chapter": "work_energy_and_power",
+      "question_number": "10.",
+      "question_text": "একটি রাবার ব্যান্ডকে টেনে এর দৈর্ঘ্য $x$ পরিমাণ বৃদ্ধি করলে, রাবার ব্যান্ডে সৃষ্ট প্রত্যয়নী বল হলো $F = ax + bx^2$ (এখানে $a$ এবং $b$ ধ্রুবক)। রাবার ব্যান্ডটিকে $x = 0$ থেকে $x = L$ পর্যন্ত বৃদ্ধি করতে কৃত কাজের মান কত?",
+      "options": [
+        {
+          "label": "A",
+          "text": "$aL^2 + bLx^3$",
+          "image_filename": null
+        },
+        {
+          "label": "B",
+          "text": "$\\frac{aL^2}{2} + 2bL^2$",
+          "image_filename": null
+        },
+        {
+          "label": "C",
+          "text": "$a + 2bL$",
+          "image_filename": null
+        },
+        {
+          "label": "D",
+          "text": "$\\frac{aL^2}{2} + \\frac{bL^3}{3}$",
+          "image_filename": null
+        }
+      ],
+      "correct_answer": "D",
+      "images": [],
+      "question_region": {
+        "page_index": 0,
+        "box_2d": [
+          386,
+          31,
+          598,
+          488
+        ]
+      }
+    },
+    {
+      "university_name": "Dhaka University",
+      "exam_session": "2021-2022",
+      "exam_unit": "A",
+      "subject": "physics",
+      "chapter": "periodic_motion",
+      "question_number": "11.",
+      "question_text": "$6\\frac{d^2x}{dt^2} + 150x = 0$ তরঙ্গের কৌণিক কম্পাঙ্ক কত?",
+      "options": [
+        {
+          "label": "A",
+          "text": "6",
+          "image_filename": null
+        },
+        {
+          "label": "B",
+          "text": "5",
+          "image_filename": null
+        },
+        {
+          "label": "C",
+          "text": "25",
+          "image_filename": null
+        },
+        {
+          "label": "D",
+          "text": "150",
+          "image_filename": null
+        }
+      ],
+      "correct_answer": "B",
+      "images": [],
+      "question_region": {
+        "page_index": 0,
+        "box_2d": [
+          601,
+          35,
+          767,
+          488
+        ]
+      }
+    },
+    {
+      "university_name": "Dhaka University",
+      "exam_session": "2021-2022",
+      "exam_unit": "A",
+      "subject": "physics",
+      "chapter": "introduction_to_modern_physics",
+      "question_number": "12.",
+      "question_text": "শূন্য ভর এবং $E$ শক্তিবিশিষ্ট একটি কণার ভরবেগ কোনটি?",
+      "options": [
+        {
+          "label": "A",
+          "text": "$\\sqrt{(Ec)}$",
+          "image_filename": null
+        },
+        {
+          "label": "B",
+          "text": "$\\frac{E}{c}$",
+          "image_filename": null
+        },
+        {
+          "label": "C",
+          "text": "$Ec$",
+          "image_filename": null
+        },
+        {
+          "label": "D",
+          "text": "শূন্য (0)",
+          "image_filename": null
+        }
+      ],
+      "correct_answer": "B",
+      "images": [],
+      "question_region": {
+        "page_index": 0,
+        "box_2d": [
+          773,
+          31,
+          886,
+          494
+        ]
+      }
+    },
+    {
+      "university_name": "Dhaka University",
+      "exam_session": "2021-2022",
+      "exam_unit": "A",
+      "subject": "physics",
+      "chapter": "introduction_to_modern_physics",
+      "question_number": "13.",
+      "question_text": "একটি ইলেকট্রনকে $V$ বিভব পার্থক্যের মধ্যে রাখলে, ইলেকট্রনের বেগ $v$ এবং প্রযুক্ত বিভব পার্থক্যের মধ্যে সম্পর্ক কোনটি?",
+      "options": [
+        {
+          "label": "A",
+          "text": "$v = \\sqrt{\\frac{eV}{m}}$",
+          "image_filename": null
+        },
+        {
+          "label": "B",
+          "text": "$v = \\sqrt{\\frac{2eV}{m}}$",
+          "image_filename": null
+        },
+        {
+          "label": "C",
+          "text": "$v = \\frac{eV^2}{m}$",
+          "image_filename": null
+        },
+        {
+          "label": "D",
+          "text": "$v = \\frac{1}{2}mv^2$",
+          "image_filename": null
+        }
+      ],
+      "correct_answer": "B",
+      "images": [],
+      "question_region": {
+        "page_index": 0,
+        "box_2d": [
+          66,
+          490,
+          205,
+          971
+        ]
+      }
+    },
+    {
+      "university_name": "Dhaka University",
+      "exam_session": "2021-2022",
+      "exam_unit": "A",
+      "subject": "physics",
+      "chapter": "thermodynamics",
+      "question_number": "14.",
+      "question_text": "একটি রান্নাঘরের দেয়াল, সিলিং এবং মেঝে তাপীয় অন্তরক পদার্থ দিয়ে তৈরি। রান্নাঘরে একটি সাধারণ রেফ্রিজারেটরের দরজা খুলে তা চালু রাখা হলে রান্নাঘরের তাপমাত্রা-",
+      "options": [
+        {
+          "label": "A",
+          "text": "কমবে",
+          "image_filename": null
+        },
+        {
+          "label": "B",
+          "text": "স্থির থাকবে",
+          "image_filename": null
+        },
+        {
+          "label": "C",
+          "text": "বাড়বে",
+          "image_filename": null
+        },
+        {
+          "label": "D",
+          "text": "প্রথমে বাড়বে তারপর কমবে",
+          "image_filename": null
+        }
+      ],
+      "correct_answer": "C",
+      "images": [],
+      "question_region": {
+        "page_index": 0,
+        "box_2d": [
+          208,
+          494,
+          346,
+          971
+        ]
+      }
+    },
+    {
+      "university_name": "Dhaka University",
+      "exam_session": "2021-2022",
+      "exam_unit": "A",
+      "subject": "physics",
+      "chapter": "thermodynamics",
+      "question_number": "15.",
+      "question_text": "একটি প্রত্যাবর্তী চক্রাকার প্রক্রিয়ার এক চক্রের পরে নিচের কোনটি শূন্য নাও হতে পারে? (এখানে $U = $ অভ্যন্তরীণ শক্তি, $P = $ চাপ, $W = $ সিস্টেমের দ্বারা কৃতকাজ, $S = $ এনট্রপি)",
+      "options": [
+        {
+          "label": "A",
+          "text": "$\\Delta U$",
+          "image_filename": null
+        },
+        {
+          "label": "B",
+          "text": "$W$",
+          "image_filename": null
+        },
+        {
+          "label": "C",
+          "text": "$\\Delta P$",
+          "image_filename": null
+        },
+        {
+          "label": "D",
+          "text": "$\\Delta S$",
+          "image_filename": null
+        }
+      ],
+      "correct_answer": "B",
+      "images": [],
+      "question_region": {
+        "page_index": 0,
+        "box_2d": [
+          349,
+          494,
+          461,
+          971
+        ]
+      }
+    },
+    {
+      "university_name": "Dhaka University",
+      "exam_session": "2021-2022",
+      "exam_unit": "A",
+      "subject": "chemistry",
+      "chapter": "periodic_properties_of_elements_and_chemical_bonding",
+      "question_number": "01.",
+      "question_text": "গ্রাফাইটে কোন ধরনের সংকরণ বিদ্যমান?",
+      "options": [
+        {
+          "label": "A",
+          "text": "$sp^3$",
+          "image_filename": null
+        },
+        {
+          "label": "B",
+          "text": "$sp^2$",
+          "image_filename": null
+        },
+        {
+          "label": "C",
+          "text": "$sp$",
+          "image_filename": null
+        },
+        {
+          "label": "D",
+          "text": "$sp^3d$",
+          "image_filename": null
+        }
+      ],
+      "correct_answer": "B",
+      "images": [],
+      "question_region": {
+        "page_index": 0,
+        "box_2d": [
+          493,
+          501,
+          585,
+          971
+        ]
+      }
+    },
+    {
+      "university_name": "Dhaka University",
+      "exam_session": "2021-2022",
+      "exam_unit": "A",
+      "subject": "chemistry",
+      "chapter": "chemical_changes",
+      "question_number": "02.",
+      "question_text": "নিচের কোনটি অসামঞ্জস্যকরণ বিক্রিয়া?",
+      "options": [
+        {
+          "label": "A",
+          "text": "$\\ce{2Na + Cl2 -> 2NaCl}$",
+          "image_filename": null
+        },
+        {
+          "label": "B",
+          "text": "$\\ce{AgNO3 + NaCl -> NaNO3 + AgCl}$",
+          "image_filename": null
+        },
+        {
+          "label": "C",
+          "text": "$\\ce{Cl2 + H2O -> HCl + HOCl}$",
+          "image_filename": null
+        },
+        {
+          "label": "D",
+          "text": "$\\ce{FeCl3 + SnCl2 -> SnCl4 + FeCl2}$",
+          "image_filename": null
+        }
+      ],
+      "correct_answer": "C",
+      "images": [],
+      "question_region": {
+        "page_index": 0,
+        "box_2d": [
+          588,
+          501,
+          722,
+          971
+        ]
+      }
+    },
+    {
+      "university_name": "Dhaka University",
+      "exam_session": "2021-2022",
+      "exam_unit": "A",
+      "subject": "chemistry",
+      "chapter": "organic_chemistry",
+      "question_number": "03.",
+      "question_text": "অনাব্র $\\ce{AlCl3}$-এর উপস্থিতিতে বেনজিনের সাথে অ্যাসিটাইল ক্লোরাইডের বিক্রিয়ায় উৎপন্ন হয়-",
+      "options": [
+        {
+          "label": "A",
+          "text": "Chlorobenzene",
+          "image_filename": null
+        },
+        {
+          "label": "B",
+          "text": "Acetophenone",
+          "image_filename": null
+        },
+        {
+          "label": "C",
+          "text": "Toluene",
+          "image_filename": null
+        },
+        {
+          "label": "D",
+          "text": "Benzoic acid",
+          "image_filename": null
+        }
+      ],
+      "correct_answer": "B",
+      "images": [
+        {
+          "id": "IMAGE_1",
+          "kind": "diagram",
+          "caption_hint": null,
+          "label": "chemical_reaction",
+          "page_index": 1,
+          "box_2d": null,
+          "markdown": null,
+          "filename": null,
+          "extraction_status": "pending",
+          "review_notes": null
+        }
+      ],
+      "question_region": {
+        "page_index": 0,
+        "box_2d": [
+          725,
+          501,
+          888,
+          971
+        ]
+      }
+    },
+    {
+      "university_name": "Dhaka University",
+      "exam_session": "2021-2022",
+      "exam_unit": "A",
+      "subject": "chemistry",
+      "chapter": "electrochemistry",
+      "question_number": "04",
+      "question_text": "ড্যানিয়েল কোষে যে সকল ধাতু ইলেকট্রোড হিসেবে ব্যবহৃত হয় তা হলো-",
+      "options": [
+        {
+          "label": "A",
+          "text": "Cu and Mg",
+          "image_filename": null
+        },
+        {
+          "label": "B",
+          "text": "Cu and Zn",
+          "image_filename": null
+        },
+        {
+          "label": "C",
+          "text": "Zn and Pb",
+          "image_filename": null
+        },
+        {
+          "label": "D",
+          "text": "Pb and Cu",
+          "image_filename": null
+        }
+      ],
+      "correct_answer": "B",
+      "images": [],
+      "question_region": {
+        "page_index": 0,
+        "box_2d": [
+          68,
+          48,
+          137,
+          499
+        ]
+      }
+    },
+    {
+      "university_name": "Dhaka University",
+      "exam_session": "2021-2022",
+      "exam_unit": "A",
+      "subject": "chemistry",
+      "chapter": "organic_chemistry",
+      "question_number": "05",
+      "question_text": "$\\ce{CH3MgX}$ এর সাথে নিচের কোন যৌগটির বিক্রিয়ায় আইসোপ্রোপানল উৎপন্ন হয়?",
+      "options": [
+        {
+          "label": "A",
+          "text": "HCHO",
+          "image_filename": null
+        },
+        {
+          "label": "B",
+          "text": "$\\ce{CH3CHO}$",
+          "image_filename": null
+        },
+        {
+          "label": "C",
+          "text": "$\\ce{CH3COCH3}$",
+          "image_filename": null
+        },
+        {
+          "label": "D",
+          "text": "$\\ce{CH3OH}$",
+          "image_filename": null
+        }
+      ],
+      "correct_answer": "B",
+      "images": [],
+      "question_region": {
+        "page_index": 0,
+        "box_2d": [
+          144,
+          48,
+          368,
+          503
+        ]
+      }
+    },
+    {
+      "university_name": "Dhaka University",
+      "exam_session": "2021-2022",
+      "exam_unit": "A",
+      "subject": "chemistry",
+      "chapter": "environmental_chemistry",
+      "question_number": "06",
+      "question_text": "একটি আদর্শ গ্যাসের জন্য PV বনাম $\\frac{1}{P}$ লেখচিত্র হবে একটি-",
+      "options": [
+        {
+          "label": "A",
+          "text": "ছেদকসহ সরলরেখা",
+          "image_filename": null
+        },
+        {
+          "label": "B",
+          "text": "অধিবৃত্ত",
+          "image_filename": null
+        },
+        {
+          "label": "C",
+          "text": "X-অক্ষের সমান্তরাল সরলরেখা",
+          "image_filename": null
+        },
+        {
+          "label": "D",
+          "text": "মূলবিন্দুগামী সরলরেখা",
+          "image_filename": null
+        }
+      ],
+      "correct_answer": "C",
+      "images": [
+        {
+          "id": "IMAGE_1",
+          "kind": "diagram",
+          "caption_hint": "চিত্র-১: PV বনাম 1/P লেখচিত্র",
+          "label": "graph",
+          "page_index": 2,
+          "box_2d": null,
+          "markdown": null,
+          "filename": null,
+          "extraction_status": "pending",
+          "review_notes": null
+        }
+      ],
+      "question_region": {
+        "page_index": 0,
+        "box_2d": [
+          384,
+          48,
+          576,
+          503
+        ]
+      }
+    },
+    {
+      "university_name": "Dhaka University",
+      "exam_session": "2021-2022",
+      "exam_unit": "A",
+      "subject": "chemistry",
+      "chapter": "organic_chemistry",
+      "question_number": "07",
+      "question_text": "$\\ce{C5H12}$ যৌগের গাঠনিক সমাণু কয়টি?",
+      "options": [
+        {
+          "label": "A",
+          "text": "2",
+          "image_filename": null
+        },
+        {
+          "label": "B",
+          "text": "3",
+          "image_filename": null
+        },
+        {
+          "label": "C",
+          "text": "4",
+          "image_filename": null
+        },
+        {
+          "label": "D",
+          "text": "5",
+          "image_filename": null
+        }
+      ],
+      "correct_answer": "B",
+      "images": [],
+      "question_region": {
+        "page_index": 0,
+        "box_2d": [
+          583,
+          48,
+          753,
+          503
+        ]
+      }
+    },
+    {
+      "university_name": "Dhaka University",
+      "exam_session": "2021-2022",
+      "exam_unit": "A",
+      "subject": "chemistry",
+      "chapter": "organic_chemistry",
+      "question_number": "08",
+      "question_text": "$\\ce{C2H5OH}$ জারিত হয়ে তৈরি হয় Z, যা $\\ce{C2H5OH}$-এর সাথে এস্টার প্রস্তুত করে। Z কী?",
+      "options": [
+        {
+          "label": "A",
+          "text": "HCOOH",
+          "image_filename": null
+        },
+        {
+          "label": "B",
+          "text": "$\\ce{CH3COOH}$",
+          "image_filename": null
+        },
+        {
+          "label": "C",
+          "text": "$\\ce{CH3CHO}$",
+          "image_filename": null
+        },
+        {
+          "label": "D",
+          "text": "$\\ce{CH3CH2CH2COOH}$",
+          "image_filename": null
+        }
+      ],
+      "correct_answer": "B",
+      "images": [],
+      "question_region": {
+        "page_index": 0,
+        "box_2d": [
+          758,
+          48,
+          892,
+          508
+        ]
+      }
+    },
+    {
+      "university_name": "Dhaka University",
+      "exam_session": "2021-2022",
+      "exam_unit": "A",
+      "subject": "chemistry",
+      "chapter": "periodic_properties_of_elements_and_chemical_bonding",
+      "question_number": "09",
+      "question_text": "সোডিয়াম ধাতু সংরক্ষণের জন্য নিচের কোনটি উপযুক্ত?",
+      "options": [
+        {
+          "label": "A",
+          "text": "$\\ce{NaCl(aq)}$",
+          "image_filename": null
+        },
+        {
+          "label": "B",
+          "text": "$\\ce{HCl(aq)}$",
+          "image_filename": null
+        },
+        {
+          "label": "C",
+          "text": "Ethanol",
+          "image_filename": null
+        },
+        {
+          "label": "D",
+          "text": "Hexane",
+          "image_filename": null
+        }
+      ],
+      "correct_answer": "D",
+      "images": [],
+      "question_region": {
+        "page_index": 0,
+        "box_2d": [
+          68,
+          516,
+          161,
+          977
+        ]
+      }
+    },
+    {
+      "university_name": "Dhaka University",
+      "exam_session": "2021-2022",
+      "exam_unit": "A",
+      "subject": "chemistry",
+      "chapter": "qualitative_chemistry",
+      "question_number": "10",
+      "question_text": "কোন উপস্তরটি সম্ভব নয়?",
+      "options": [
+        {
+          "label": "A",
+          "text": "2d",
+          "image_filename": null
+        },
+        {
+          "label": "B",
+          "text": "3p",
+          "image_filename": null
+        },
+        {
+          "label": "C",
+          "text": "4f",
+          "image_filename": null
+        },
+        {
+          "label": "D",
+          "text": "1s",
+          "image_filename": null
+        }
+      ],
+      "correct_answer": "A",
+      "images": [],
+      "question_region": {
+        "page_index": 0,
+        "box_2d": [
+          168,
+          516,
+          230,
+          977
+        ]
+      }
+    },
+    {
+      "university_name": "Dhaka University",
+      "exam_session": "2021-2022",
+      "exam_unit": "A",
+      "subject": "chemistry",
+      "chapter": "periodic_properties_of_elements_and_chemical_bonding",
+      "question_number": "11",
+      "question_text": "কোন যৌগটি সরলরৈখিক নয়?",
+      "options": [
+        {
+          "label": "A",
+          "text": "$\\ce{CO2}$",
+          "image_filename": null
+        },
+        {
+          "label": "B",
+          "text": "$\\ce{H2S}$",
+          "image_filename": null
+        },
+        {
+          "label": "C",
+          "text": "$\\ce{C2H2}$",
+          "image_filename": null
+        },
+        {
+          "label": "D",
+          "text": "$\\ce{O2}$",
+          "image_filename": null
+        }
+      ],
+      "correct_answer": "B",
+      "images": [
+        {
+          "id": "IMAGE_1",
+          "kind": "table",
+          "caption_hint": null,
+          "label": "data_table",
+          "page_index": 2,
+          "box_2d": null,
+          "markdown": null,
+          "filename": null,
+          "extraction_status": "pending",
+          "review_notes": null
+        }
+      ],
+      "question_region": {
+        "page_index": 0,
+        "box_2d": [
+          237,
+          516,
+          366,
+          977
+        ]
+      }
+    },
+    {
+      "university_name": "Dhaka University",
+      "exam_session": "2021-2022",
+      "exam_unit": "A",
+      "subject": "chemistry",
+      "chapter": "chemical_changes",
+      "question_number": "12",
+      "question_text": "কোনটি ক্ষারীয় বাফার দ্রবণ?",
+      "options": [
+        {
+          "label": "A",
+          "text": "$\\ce{HCOOH + HCOONa}$",
+          "image_filename": null
+        },
+        {
+          "label": "B",
+          "text": "$\\ce{NaOH + NaCl}$",
+          "image_filename": null
+        },
+        {
+          "label": "C",
+          "text": "Aq. $\\ce{NH3 + NaOH}$",
+          "image_filename": null
+        },
+        {
+          "label": "D",
+          "text": "Aq. $\\ce{NH3 + NH4Cl}$",
+          "image_filename": null
+        }
+      ],
+      "correct_answer": "D",
+      "images": [],
+      "question_region": {
+        "page_index": 0,
+        "box_2d": [
+          371,
+          516,
+          514,
+          977
+        ]
+      }
+    },
+    {
+      "university_name": "Dhaka University",
+      "exam_session": "2021-2022",
+      "exam_unit": "A",
+      "subject": "chemistry",
+      "chapter": "environmental_chemistry",
+      "question_number": "13",
+      "question_text": "হাইড্রোজেন গ্যাসের ব্যাপনের হার কোনো একটি গ্যাসের ব্যাপনের হারের ৬ গুণ। গ্যাসটির আণবিক ভর কত?",
+      "options": [
+        {
+          "label": "A",
+          "text": "128 g/mol",
+          "image_filename": null
+        },
+        {
+          "label": "B",
+          "text": "72 g/mol",
+          "image_filename": null
+        },
+        {
+          "label": "C",
+          "text": "32 g/mol",
+          "image_filename": null
+        },
+        {
+          "label": "D",
+          "text": "180 g/mol",
+          "image_filename": null
+        }
+      ],
+      "correct_answer": "B",
+      "images": [],
+      "question_region": {
+        "page_index": 0,
+        "box_2d": [
+          520,
+          516,
+          645,
+          977
+        ]
+      }
+    },
+    {
+      "university_name": "Dhaka University",
+      "exam_session": "2021-2022",
+      "exam_unit": "A",
+      "subject": "chemistry",
+      "chapter": "periodic_properties_of_elements_and_chemical_bonding",
+      "question_number": "14",
+      "question_text": "C, O, N এবং F-এর তড়িৎ ঋণাত্মকতার সঠিক ক্রম কোনটি?",
+      "options": [
+        {
+          "label": "A",
+          "text": "F > O > N > C",
+          "image_filename": null
+        },
+        {
+          "label": "B",
+          "text": "N > F > O > C",
+          "image_filename": null
+        },
+        {
+          "label": "C",
+          "text": "O > F > C > N",
+          "image_filename": null
+        },
+        {
+          "label": "D",
+          "text": "F > N > O > C",
+          "image_filename": null
+        }
+      ],
+      "correct_answer": "A",
+      "images": [],
+      "question_region": {
+        "page_index": 0,
+        "box_2d": [
+          649,
+          516,
+          773,
+          977
+        ]
+      }
+    },
+    {
+      "university_name": "Dhaka University",
+      "exam_session": "2021-2022",
+      "exam_unit": "A",
+      "subject": "chemistry",
+      "chapter": "chemical_changes",
+      "question_number": "15",
+      "question_text": "নিচের বিক্রিয়াসমূহের মধ্যে কোনটির জন্য $K_p = K_c$?",
+      "options": [
+        {
+          "label": "A",
+          "text": "$\\ce{PCl5(g) = PCl3(g) + Cl2(g)}$",
+          "image_filename": null
+        },
+        {
+          "label": "B",
+          "text": "$\\ce{N2(g) + O2(g) = 2NO(g)}$",
+          "image_filename": null
+        },
+        {
+          "label": "C",
+          "text": "$\\ce{N2(g) + 3H2(g) = 2NH3(g)}$",
+          "image_filename": null
+        },
+        {
+          "label": "D",
+          "text": "$\\ce{2SO3(g) = 2SO2(g) + O2(g)}$",
+          "image_filename": null
+        }
+      ],
+      "correct_answer": "B",
+      "images": [],
+      "question_region": {
+        "page_index": 0,
+        "box_2d": [
+          779,
+          516,
+          889,
+          977
+        ]
+      }
+    },
+    {
+      "university_name": "Dhaka University",
+      "exam_session": "2021-2022",
+      "exam_unit": "A",
+      "subject": "mathematics",
+      "chapter": "polynomials_and_polynomial_equations",
+      "question_number": "01.",
+      "question_text": "$k$ এর কোন মানের জন্য $2x^2 - kx + 1 = 0$ এর একটি মূল অপর মূলের বর্গের চারগুণের সমান হবে?",
+      "options": [
+        {
+          "label": "A",
+          "text": "$\\frac{1}{2}$",
+          "image_filename": null
+        },
+        {
+          "label": "B",
+          "text": "$3$",
+          "image_filename": null
+        },
+        {
+          "label": "C",
+          "text": "$1$",
+          "image_filename": null
+        },
+        {
+          "label": "D",
+          "text": "$-3$",
+          "image_filename": null
+        }
+      ],
+      "correct_answer": "B",
+      "images": [],
+      "question_region": {
+        "page_index": 0,
+        "box_2d": [
+          84,
+          28,
+          168,
+          491
+        ]
+      }
+    },
+    {
+      "university_name": "Dhaka University",
+      "exam_session": "2021-2022",
+      "exam_unit": "A",
+      "subject": "mathematics",
+      "chapter": "inverse_trigonometric_functions_and_trigonometric_equations",
+      "question_number": "02.",
+      "question_text": "$\\text{cosec}^2(\\tan^{-1} \\frac{1}{2}) - 3 \\sec^2(\\cot^{-1} \\sqrt{3}) = ?$",
+      "options": [
+        {
+          "label": "A",
+          "text": "$15$",
+          "image_filename": null
+        },
+        {
+          "label": "B",
+          "text": "$\\frac{2}{9}$",
+          "image_filename": null
+        },
+        {
+          "label": "C",
+          "text": "$1$",
+          "image_filename": null
+        },
+        {
+          "label": "D",
+          "text": "$25$",
+          "image_filename": null
+        }
+      ],
+      "correct_answer": "C",
+      "images": [],
+      "question_region": {
+        "page_index": 0,
+        "box_2d": [
+          280,
+          33,
+          341,
+          491
+        ]
+      }
+    },
+    {
+      "university_name": "Dhaka University",
+      "exam_session": "2021-2022",
+      "exam_unit": "A",
+      "subject": "mathematics",
+      "chapter": "conics",
+      "question_number": "03.",
+      "question_text": "একটি উপবৃত্তের উপকেন্দ্রিক লম্বের দৈর্ঘ্য বৃহদাক্ষের দৈর্ঘ্যের অর্ধেক, উপবৃত্তটির উৎকেন্দ্রিকতা কত?",
+      "options": [
+        {
+          "label": "A",
+          "text": "$\\frac{1}{\\sqrt{3}}$",
+          "image_filename": null
+        },
+        {
+          "label": "B",
+          "text": "$\\frac{1}{\\sqrt{2}}$",
+          "image_filename": null
+        },
+        {
+          "label": "C",
+          "text": "$\\frac{2}{\\sqrt{3}}$",
+          "image_filename": null
+        },
+        {
+          "label": "D",
+          "text": "$\\frac{2}{3}$",
+          "image_filename": null
+        }
+      ],
+      "correct_answer": "B",
+      "images": [],
+      "question_region": {
+        "page_index": 0,
+        "box_2d": [
+          467,
+          33,
+          536,
+          491
+        ]
+      }
+    },
+    {
+      "university_name": "Dhaka University",
+      "exam_session": "2021-2022",
+      "exam_unit": "A",
+      "subject": "mathematics",
+      "chapter": "differential_calculus",
+      "question_number": "04.",
+      "question_text": "$k$ এর কোন মানের জন্য $x = 1$ বিন্দুতে $f(x) = x^2 + \\frac{k}{x}$ এর লঘুমান পাওয়া যাবে?",
+      "options": [
+        {
+          "label": "A",
+          "text": "$0$",
+          "image_filename": null
+        },
+        {
+          "label": "B",
+          "text": "$-1$",
+          "image_filename": null
+        },
+        {
+          "label": "C",
+          "text": "$2$",
+          "image_filename": null
+        },
+        {
+          "label": "D",
+          "text": "$1$",
+          "image_filename": null
+        }
+      ],
+      "correct_answer": "C",
+      "images": [],
+      "question_region": {
+        "page_index": 0,
+        "box_2d": [
+          611,
+          33,
+          658,
+          491
+        ]
+      }
+    },
+    {
+      "university_name": "Dhaka University",
+      "exam_session": "2021-2022",
+      "exam_unit": "A",
+      "subject": "mathematics",
+      "chapter": "statics",
+      "question_number": "05.",
+      "question_text": "কোনো একটি বিন্দুতে ক্রিয়ারত $2N$ ও $2\\sqrt{2}N$ বলদ্বয়ের লব্ধি $2\\sqrt{5}N$ হলে, তাদের মধ্যবর্তী কোণ-",
+      "options": [
+        {
+          "label": "A",
+          "text": "$135^\\circ$",
+          "image_filename": null
+        },
+        {
+          "label": "B",
+          "text": "$45^\\circ$",
+          "image_filename": null
+        },
+        {
+          "label": "C",
+          "text": "$225^\\circ$",
+          "image_filename": null
+        },
+        {
+          "label": "D",
+          "text": "$90^\\circ$",
+          "image_filename": null
+        }
+      ],
+      "correct_answer": "B",
+      "images": [],
+      "question_region": {
+        "page_index": 0,
+        "box_2d": [
+          761,
+          33,
+          816,
+          491
+        ]
+      }
+    },
+    {
+      "university_name": "Dhaka University",
+      "exam_session": "2021-2022",
+      "exam_unit": "A",
+      "subject": "mathematics",
+      "chapter": "polynomials_and_polynomial_equations",
+      "question_number": "06.",
+      "question_text": "$\\frac{1}{x} + a - bx = 0$ সমীকরণের মূলদ্বয় সমান হলে কোনটি সঠিক?",
+      "options": [
+        {
+          "label": "A",
+          "text": "$a^2 - 4b = 0$",
+          "image_filename": null
+        },
+        {
+          "label": "B",
+          "text": "$b^2 - 4a = 0$",
+          "image_filename": null
+        },
+        {
+          "label": "C",
+          "text": "$b^2 + 4a = 0$",
+          "image_filename": null
+        },
+        {
+          "label": "D",
+          "text": "$a^2 + 4b = 0$",
+          "image_filename": null
+        }
+      ],
+      "correct_answer": "D",
+      "images": [],
+      "question_region": {
+        "page_index": 0,
+        "box_2d": [
+          64,
+          513,
+          113,
+          956
+        ]
+      }
+    },
+    {
+      "university_name": "Dhaka University",
+      "exam_session": "2021-2022",
+      "exam_unit": "A",
+      "subject": "mathematics",
+      "chapter": "circles",
+      "question_number": "07.",
+      "question_text": "$3x + 4y = k$ রেখাটি $x^2 + y^2 = 10x$ বৃত্তকে স্পর্শ করে। $k$ এর মান কত?",
+      "options": [
+        {
+          "label": "A",
+          "text": "$8, -30$",
+          "image_filename": null
+        },
+        {
+          "label": "B",
+          "text": "$-8, 30$",
+          "image_filename": null
+        },
+        {
+          "label": "C",
+          "text": "$-10, 40$",
+          "image_filename": null
+        },
+        {
+          "label": "D",
+          "text": "$10, -40$",
+          "image_filename": null
+        }
+      ],
+      "correct_answer": "C",
+      "images": [],
+      "question_region": {
+        "page_index": 0,
+        "box_2d": [
+          178,
+          513,
+          210,
+          956
+        ]
+      }
+    },
+    {
+      "university_name": "Dhaka University",
+      "exam_session": "2021-2022",
+      "exam_unit": "A",
+      "subject": "mathematics",
+      "chapter": "differential_calculus",
+      "question_number": "08.",
+      "question_text": "কোন ব্যবধিতে $f(x) = \\frac{x}{x^2 + 1}$ ক্রমবর্ধমান?",
+      "options": [
+        {
+          "label": "A",
+          "text": "$(-\\infty, 0)$",
+          "image_filename": null
+        },
+        {
+          "label": "B",
+          "text": "$(-1, 1)$",
+          "image_filename": null
+        },
+        {
+          "label": "C",
+          "text": "$(0, \\infty)$",
+          "image_filename": null
+        },
+        {
+          "label": "D",
+          "text": "$(-1, \\infty)$",
+          "image_filename": null
+        }
+      ],
+      "correct_answer": "B",
+      "images": [],
+      "question_region": {
+        "page_index": 0,
+        "box_2d": [
+          323,
+          513,
+          368,
+          956
+        ]
+      }
+    },
+    {
+      "university_name": "Dhaka University",
+      "exam_session": "2021-2022",
+      "exam_unit": "A",
+      "subject": "mathematics",
+      "chapter": "straight_lines",
+      "question_number": "09.",
+      "question_text": "কোনো বিন্দুর পোলার স্থানাঙ্ক $(c, \\pi)$ হলে বিন্দুটির কার্তেসীয় স্থানাঙ্ক কত?",
+      "options": [
+        {
+          "label": "A",
+          "text": "$(-1, 0)$",
+          "image_filename": null
+        },
+        {
+          "label": "B",
+          "text": "$(-c, 0)$",
+          "image_filename": null
+        },
+        {
+          "label": "C",
+          "text": "$(c, -c)$",
+          "image_filename": null
+        },
+        {
+          "label": "D",
+          "text": "$(-c, c)$",
+          "image_filename": null
+        }
+      ],
+      "correct_answer": "B",
+      "images": [],
+      "question_region": {
+        "page_index": 0,
+        "box_2d": [
+          497,
+          513,
+          531,
+          956
+        ]
+      }
+    },
+    {
+      "university_name": "Dhaka University",
+      "exam_session": "2021-2022",
+      "exam_unit": "A",
+      "subject": "mathematics",
+      "chapter": "conics",
+      "question_number": "10.",
+      "question_text": "$y^2 = 8x + 2y - 9$ পরাবৃত্তটির উপকেন্দ্রের স্থানাঙ্ক কত?",
+      "options": [
+        {
+          "label": "A",
+          "text": "$(3, 1)$",
+          "image_filename": null
+        },
+        {
+          "label": "B",
+          "text": "$(3, 0)$",
+          "image_filename": null
+        },
+        {
+          "label": "C",
+          "text": "$(-1, 1)$",
+          "image_filename": null
+        },
+        {
+          "label": "D",
+          "text": "$(2, 0)$",
+          "image_filename": null
+        }
+      ],
+      "correct_answer": "A",
+      "images": [],
+      "question_region": {
+        "page_index": 0,
+        "box_2d": [
+          549,
+          513,
+          586,
+          956
+        ]
+      }
+    },
+    {
+      "university_name": "Dhaka University",
+      "exam_session": "2021-2022",
+      "exam_unit": "A",
+      "subject": "mathematics",
+      "chapter": "conics",
+      "question_number": "11.",
+      "question_text": "$x^2 - 3y^2 - 2x = 8$ অধিবৃত্তের শীর্ষবিন্দুদ্বয়",
+      "options": [
+        {
+          "label": "A",
+          "text": "$(-4, 0), (2, 0)$",
+          "image_filename": null
+        },
+        {
+          "label": "B",
+          "text": "$(0, 4), (0, 2)$",
+          "image_filename": null
+        },
+        {
+          "label": "C",
+          "text": "$(0, -4), (0, -1)$",
+          "image_filename": null
+        },
+        {
+          "label": "D",
+          "text": "$(4, 0), (-2, 0)$",
+          "image_filename": null
+        }
+      ],
+      "correct_answer": "D",
+      "images": [],
+      "question_region": {
+        "page_index": 0,
+        "box_2d": [
+          655,
+          513,
+          708,
+          956
+        ]
+      }
+    },
+    {
+      "university_name": "Dhaka University",
+      "exam_session": "2021-2022",
+      "exam_unit": "A",
+      "subject": "mathematics",
+      "chapter": "matrices_and_determinants",
+      "question_number": "12.",
+      "question_text": "$A = \\begin{bmatrix} 1 & 2 \\\\ 2 & 5 \\end{bmatrix}$ হলে, $\\text{det}(AA^{-1})$ এর মান কত?",
+      "options": [
+        {
+          "label": "A",
+          "text": "$1$",
+          "image_filename": null
+        },
+        {
+          "label": "B",
+          "text": "$-1$",
+          "image_filename": null
+        },
+        {
+          "label": "C",
+          "text": "$0$",
+          "image_filename": null
+        },
+        {
+          "label": "D",
+          "text": "$-\\frac{1}{2}$",
+          "image_filename": null
+        }
+      ],
+      "correct_answer": "A",
+      "images": [],
+      "question_region": {
+        "page_index": 0,
+        "box_2d": [
+          808,
+          513,
+          871,
+          956
+        ]
+      }
+    },
+    {
+      "university_name": "Dhaka University",
+      "exam_session": "2021-2022",
+      "exam_unit": "A",
+      "subject": "mathematics",
+      "chapter": "differential_calculus",
+      "question_number": "13",
+      "question_text": "কোন ফাংশনটির জন্য $(1-x^2) \\frac{d^2y}{dx^2} - x \\frac{dy}{dx} = 2$ সত্য?",
+      "options": [
+        {
+          "label": "A",
+          "text": "$y = \\cos^{-1}x$",
+          "image_filename": null
+        },
+        {
+          "label": "B",
+          "text": "$y = (\\cos^{-1}x)^2$",
+          "image_filename": null
+        },
+        {
+          "label": "C",
+          "text": "$y = \\sin^{-1}x$",
+          "image_filename": null
+        },
+        {
+          "label": "D",
+          "text": "$y = \\tan^{-1}x$",
+          "image_filename": null
+        }
+      ],
+      "correct_answer": "B",
+      "images": [],
+      "question_region": {
+        "page_index": 0,
+        "box_2d": [
+          78,
+          31,
+          268,
+          495
+        ]
+      }
+    },
+    {
+      "university_name": "Dhaka University",
+      "exam_session": "2021-2022",
+      "exam_unit": "A",
+      "subject": "mathematics",
+      "chapter": "straight_lines",
+      "question_number": "14",
+      "question_text": "$x - 3y - 2 = 0$ রেখার ওপর অবস্থিত $P$ বিন্দুটি $(2, 3)$ এবং $(6, -5)$ হতে সমদূরবর্তী হতে $P$ বিন্দুর স্থানাঙ্ক কত?",
+      "options": [
+        {
+          "label": "A",
+          "text": "$(4, 14)$",
+          "image_filename": null
+        },
+        {
+          "label": "B",
+          "text": "$(-10, 4)$",
+          "image_filename": null
+        },
+        {
+          "label": "C",
+          "text": "$(14, 4)$",
+          "image_filename": null
+        },
+        {
+          "label": "D",
+          "text": "$(4, -10)$",
+          "image_filename": null
+        }
+      ],
+      "correct_answer": "C",
+      "images": [],
+      "question_region": {
+        "page_index": 0,
+        "box_2d": [
+          275,
+          31,
+          406,
+          495
+        ]
+      }
+    },
+    {
+      "university_name": "Dhaka University",
+      "exam_session": "2021-2022",
+      "exam_unit": "A",
+      "subject": "mathematics",
+      "chapter": "integral_calculus",
+      "question_number": "15",
+      "question_text": "$\\int_{-2}^{-1} (x + |x|) dx = ?$",
+      "options": [
+        {
+          "label": "A",
+          "text": "$3$",
+          "image_filename": null
+        },
+        {
+          "label": "B",
+          "text": "$0$",
+          "image_filename": null
+        },
+        {
+          "label": "C",
+          "text": "$1$",
+          "image_filename": null
+        },
+        {
+          "label": "D",
+          "text": "$6$",
+          "image_filename": null
+        }
+      ],
+      "correct_answer": "B",
+      "images": [],
+      "question_region": {
+        "page_index": 0,
+        "box_2d": [
+          415,
+          31,
+          521,
+          495
+        ]
+      }
+    },
+    {
+      "university_name": "Dhaka University",
+      "exam_session": "2021-2022",
+      "exam_unit": "A",
+      "subject": "biology",
+      "chapter": "cell_and_its_structure",
+      "question_number": "01",
+      "question_text": "অক্সিসোম কোন অঙ্গাণুর অংশ?",
+      "options": [
+        {
+          "label": "A",
+          "text": "রাইবোসোম",
+          "image_filename": null
+        },
+        {
+          "label": "B",
+          "text": "প্লাস্টিড",
+          "image_filename": null
+        },
+        {
+          "label": "C",
+          "text": "মাইটোকন্ড্রিয়া",
+          "image_filename": null
+        },
+        {
+          "label": "D",
+          "text": "গলগি বডি",
+          "image_filename": null
+        }
+      ],
+      "correct_answer": "C",
+      "images": [],
+      "question_region": {
+        "page_index": 0,
+        "box_2d": [
+          555,
+          31,
+          671,
+          495
+        ]
+      }
+    },
+    {
+      "university_name": "Dhaka University",
+      "exam_session": "2021-2022",
+      "exam_unit": "A",
+      "subject": "biology",
+      "chapter": "plant_physiology",
+      "question_number": "02",
+      "question_text": "অঙ্কুরোদগমের সময় বীজ কোন প্রক্রিয়ায় পানি শোষণ করে?",
+      "options": [
+        {
+          "label": "A",
+          "text": "ব্যাপন",
+          "image_filename": null
+        },
+        {
+          "label": "B",
+          "text": "ইমবাইবিশন",
+          "image_filename": null
+        },
+        {
+          "label": "C",
+          "text": "অভিস্রবণ",
+          "image_filename": null
+        },
+        {
+          "label": "D",
+          "text": "প্রস্বেদন",
+          "image_filename": null
+        }
+      ],
+      "correct_answer": "B",
+      "images": [],
+      "question_region": {
+        "page_index": 0,
+        "box_2d": [
+          676,
+          31,
+          807,
+          495
+        ]
+      }
+    },
+    {
+      "university_name": "Dhaka University",
+      "exam_session": "2021-2022",
+      "exam_unit": "A",
+      "subject": "biology",
+      "chapter": "plant_physiology",
+      "question_number": "03",
+      "question_text": "সালোকসংশ্লেষণের রঞ্জক পদার্থগুলো কোথায় থাকে?",
+      "options": [
+        {
+          "label": "A",
+          "text": "থাইলাকয়েডে",
+          "image_filename": null
+        },
+        {
+          "label": "B",
+          "text": "স্ট্রোমায়",
+          "image_filename": null
+        },
+        {
+          "label": "C",
+          "text": "গ্রানায়",
+          "image_filename": null
+        },
+        {
+          "label": "D",
+          "text": "সাইটোপ্লাজমে",
+          "image_filename": null
+        }
+      ],
+      "correct_answer": "A",
+      "images": [],
+      "question_region": {
+        "page_index": 0,
+        "box_2d": [
+          812,
+          31,
+          894,
+          495
+        ]
+      }
+    },
+    {
+      "university_name": "Dhaka University",
+      "exam_session": "2021-2022",
+      "exam_unit": "A",
+      "subject": "biology",
+      "chapter": "cell_and_its_structure",
+      "question_number": "04",
+      "question_text": "ATP Synthases কোষের কোথায় থাকে?",
+      "options": [
+        {
+          "label": "A",
+          "text": "গলগি বডি",
+          "image_filename": null
+        },
+        {
+          "label": "B",
+          "text": "রাইবোসোম",
+          "image_filename": null
+        },
+        {
+          "label": "C",
+          "text": "নিউক্লিয়াস",
+          "image_filename": null
+        },
+        {
+          "label": "D",
+          "text": "মাইটোকন্ড্রিয়া",
+          "image_filename": null
+        }
+      ],
+      "correct_answer": "D",
+      "images": [],
+      "question_region": {
+        "page_index": 0,
+        "box_2d": [
+          78,
+          504,
+          213,
+          968
+        ]
+      }
+    },
+    {
+      "university_name": "Dhaka University",
+      "exam_session": "2021-2022",
+      "exam_unit": "A",
+      "subject": "biology",
+      "chapter": "plant_reproduction",
+      "question_number": "05",
+      "question_text": "নিষিক্ত ডিম্বাণু কিসে পরিণত হয়?",
+      "options": [
+        {
+          "label": "A",
+          "text": "ফলে",
+          "image_filename": null
+        },
+        {
+          "label": "B",
+          "text": "এন্ডোস্পার্মে",
+          "image_filename": null
+        },
+        {
+          "label": "C",
+          "text": "বীজে",
+          "image_filename": null
+        },
+        {
+          "label": "D",
+          "text": "ভ্রূণত্বকে",
+          "image_filename": null
+        }
+      ],
+      "correct_answer": null,
+      "images": [
+        {
+          "id": "IMAGE_1",
+          "kind": "table",
+          "caption_hint": null,
+          "label": "data_table",
+          "page_index": 4,
+          "box_2d": null,
+          "markdown": null,
+          "filename": null,
+          "extraction_status": "pending",
+          "review_notes": null
+        }
+      ],
+      "question_region": {
+        "page_index": 0,
+        "box_2d": [
+          218,
+          504,
+          401,
+          968
+        ]
+      }
+    },
+    {
+      "university_name": "Dhaka University",
+      "exam_session": "2021-2022",
+      "exam_unit": "A",
+      "subject": "biology",
+      "chapter": "plant_physiology",
+      "question_number": "06",
+      "question_text": "অবাত শ্বসনে এক অণু গ্লুকোজ থেকে কয় অণু ল্যাকটিক অ্যাসিড তৈরি হয়?",
+      "options": [
+        {
+          "label": "A",
+          "text": "২ অণু",
+          "image_filename": null
+        },
+        {
+          "label": "B",
+          "text": "৪ অণু",
+          "image_filename": null
+        },
+        {
+          "label": "C",
+          "text": "৬ অণু",
+          "image_filename": null
+        },
+        {
+          "label": "D",
+          "text": "৮ অণু",
+          "image_filename": null
+        }
+      ],
+      "correct_answer": "A",
+      "images": [],
+      "question_region": {
+        "page_index": 0,
+        "box_2d": [
+          406,
+          504,
+          577,
+          968
+        ]
+      }
+    },
+    {
+      "university_name": "Dhaka University",
+      "exam_session": "2021-2022",
+      "exam_unit": "A",
+      "subject": "biology",
+      "chapter": "tissue_and_tissue_system",
+      "question_number": "07",
+      "question_text": "ফ্লোয়েমের কোন উপাদানটি মৃত?",
+      "options": [
+        {
+          "label": "A",
+          "text": "সঙ্গী কোষ",
+          "image_filename": null
+        },
+        {
+          "label": "B",
+          "text": "ফ্লোয়েম ফাইবার",
+          "image_filename": null
+        },
+        {
+          "label": "C",
+          "text": "ফ্লোয়েম প্যারেনকাইমা",
+          "image_filename": null
+        },
+        {
+          "label": "D",
+          "text": "সীভনল",
+          "image_filename": null
+        }
+      ],
+      "correct_answer": "B",
+      "images": [],
+      "question_region": {
+        "page_index": 0,
+        "box_2d": [
+          582,
+          504,
+          741,
+          968
+        ]
+      }
+    },
+    {
+      "university_name": "Dhaka University",
+      "exam_session": "2021-2022",
+      "exam_unit": "A",
+      "subject": "biology",
+      "chapter": "cell_division",
+      "question_number": "08",
+      "question_text": "কোষ বিভাজনের কোন উপ-দশায় সমসংস্থ ক্রোমোজোমের মধ্যে সিন্যাপসিস ঘটে?",
+      "options": [
+        {
+          "label": "A",
+          "text": "জাইগোটিনে",
+          "image_filename": null
+        },
+        {
+          "label": "B",
+          "text": "লেপ্টোটিনে",
+          "image_filename": null
+        },
+        {
+          "label": "C",
+          "text": "প্যাকাইটিনে",
+          "image_filename": null
+        },
+        {
+          "label": "D",
+          "text": "ডিপ্লোটিনে",
+          "image_filename": null
+        }
+      ],
+      "correct_answer": "A",
+      "images": [],
+      "question_region": {
+        "page_index": 0,
+        "box_2d": [
+          746,
+          504,
+          894,
+          968
+        ]
+      }
+    },
+    {
+      "university_name": "Dhaka University",
+      "exam_session": "2021-2022",
+      "exam_unit": "A",
+      "subject": "biology",
+      "chapter": "animal_diversity_and_classification",
+      "question_number": "09",
+      "question_text": "নিচের কোন পর্বের প্রাণী ইউসিলোমেট নয়?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Annelida",
+          "image_filename": null
+        },
+        {
+          "label": "B",
+          "text": "Arthropoda",
+          "image_filename": null
+        },
+        {
+          "label": "C",
+          "text": "Mollusca",
+          "image_filename": null
+        },
+        {
+          "label": "D",
+          "text": "Nematoda",
+          "image_filename": null
+        }
+      ],
+      "correct_answer": "D",
+      "images": [],
+      "question_region": {
+        "page_index": 0,
+        "box_2d": [
+          61,
+          27,
+          166,
+          492
+        ]
+      }
+    },
+    {
+      "university_name": "Dhaka University",
+      "exam_session": "2021-2022",
+      "exam_unit": "A",
+      "subject": "biology",
+      "chapter": "human_physiology_blood_and_circulation",
+      "question_number": "10",
+      "question_text": "লোহিত রক্তকণিকার প্রধান প্রোটিন কোনটি?",
+      "options": [
+        {
+          "label": "A",
+          "text": "গ্লোবিউলিন",
+          "image_filename": null
+        },
+        {
+          "label": "B",
+          "text": "ইনসুলিন",
+          "image_filename": null
+        },
+        {
+          "label": "C",
+          "text": "হিম",
+          "image_filename": null
+        },
+        {
+          "label": "D",
+          "text": "অ্যালবুমিন",
+          "image_filename": null
+        }
+      ],
+      "correct_answer": "A",
+      "images": [],
+      "question_region": {
+        "page_index": 0,
+        "box_2d": [
+          170,
+          27,
+          271,
+          492
+        ]
+      }
+    },
+    {
+      "university_name": "Dhaka University",
+      "exam_session": "2021-2022",
+      "exam_unit": "A",
+      "subject": "biology",
+      "chapter": "animal_identity",
+      "question_number": "11",
+      "question_text": "ঘাসফড়িং-এর দেহের উভয় পার্শ্বে মোট কয়টি স্পাইরাকল থাকে?",
+      "options": [
+        {
+          "label": "A",
+          "text": "১০টি",
+          "image_filename": null
+        },
+        {
+          "label": "B",
+          "text": "২০টি",
+          "image_filename": null
+        },
+        {
+          "label": "C",
+          "text": "৩০টি",
+          "image_filename": null
+        },
+        {
+          "label": "D",
+          "text": "৪০টি",
+          "image_filename": null
+        }
+      ],
+      "correct_answer": "B",
+      "images": [],
+      "question_region": {
+        "page_index": 0,
+        "box_2d": [
+          275,
+          27,
+          394,
+          492
+        ]
+      }
+    },
+    {
+      "university_name": "Dhaka University",
+      "exam_session": "2021-2022",
+      "exam_unit": "A",
+      "subject": "biology",
+      "chapter": "animal_identity",
+      "question_number": "12",
+      "question_text": "কোনটি হাইড্রার প্রজননের পদ্ধতি নয়?",
+      "options": [
+        {
+          "label": "A",
+          "text": "মুকুলোদগম",
+          "image_filename": null
+        },
+        {
+          "label": "B",
+          "text": "বিভাজন",
+          "image_filename": null
+        },
+        {
+          "label": "C",
+          "text": "স্পোরুলেশন",
+          "image_filename": null
+        },
+        {
+          "label": "D",
+          "text": "যৌন জনন",
+          "image_filename": null
+        }
+      ],
+      "correct_answer": "C",
+      "images": [
+        {
+          "id": "IMAGE_1",
+          "kind": "table",
+          "caption_hint": null,
+          "label": "data_table",
+          "page_index": 5,
+          "box_2d": null,
+          "markdown": null,
+          "filename": null,
+          "extraction_status": "pending",
+          "review_notes": null
+        }
+      ],
+      "question_region": {
+        "page_index": 0,
+        "box_2d": [
+          398,
+          27,
+          488,
+          492
+        ]
+      }
+    },
+    {
+      "university_name": "Dhaka University",
+      "exam_session": "2021-2022",
+      "exam_unit": "A",
+      "subject": "biology",
+      "chapter": "continuation_of_human_life",
+      "question_number": "13",
+      "question_text": "ভ্রূণীয় মেসোডার্ম থেকে কোন অঙ্গটি গঠিত হয়?",
+      "options": [
+        {
+          "label": "A",
+          "text": "এপিডার্মিস, স্নায়ুতন্ত্র",
+          "image_filename": null
+        },
+        {
+          "label": "B",
+          "text": "কঙ্কালতন্ত্র, রক্ত সংবহনতন্ত্র",
+          "image_filename": null
+        },
+        {
+          "label": "C",
+          "text": "পৌষ্টিকতন্ত্র, শ্বসনতন্ত্র",
+          "image_filename": null
+        },
+        {
+          "label": "D",
+          "text": "এপিডার্মিস, পেশিতন্ত্র",
+          "image_filename": null
+        }
+      ],
+      "correct_answer": "B",
+      "images": [
+        {
+          "id": "IMAGE_1",
+          "kind": "table",
+          "caption_hint": "তিনটি ভ্রূণীয় স্তরের পরিণতি হলো :",
+          "label": "data_table",
+          "page_index": 5,
+          "box_2d": null,
+          "markdown": null,
+          "filename": null,
+          "extraction_status": "pending",
+          "review_notes": null
+        }
+      ],
+      "question_region": {
+        "page_index": 0,
+        "box_2d": [
+          491,
+          27,
+          635,
+          492
+        ]
+      }
+    },
+    {
+      "university_name": "Dhaka University",
+      "exam_session": "2021-2022",
+      "exam_unit": "A",
+      "subject": "biology",
+      "chapter": "human_physiology_digestion_and_absorption",
+      "question_number": "14",
+      "question_text": "Kuffer's cell কোন অঙ্গে থাকে?",
+      "options": [
+        {
+          "label": "A",
+          "text": "প্লীহা",
+          "image_filename": null
+        },
+        {
+          "label": "B",
+          "text": "মস্তিষ্ক",
+          "image_filename": null
+        },
+        {
+          "label": "C",
+          "text": "যকৃৎ",
+          "image_filename": null
+        },
+        {
+          "label": "D",
+          "text": "অগ্ন্যাশয়",
+          "image_filename": null
+        }
+      ],
+      "correct_answer": "C",
+      "images": [],
+      "question_region": {
+        "page_index": 0,
+        "box_2d": [
+          636,
+          27,
+          756,
+          492
+        ]
+      }
+    },
+    {
+      "university_name": "Dhaka University",
+      "exam_session": "2021-2022",
+      "exam_unit": "A",
+      "subject": "biology",
+      "chapter": "human_physiology_blood_and_circulation",
+      "question_number": "15",
+      "question_text": "মানবদেহে নিউক্লিয়াসবিহীন কোষ কোনটি?",
+      "options": [
+        {
+          "label": "A",
+          "text": "লোহিত রক্তকণিকা",
+          "image_filename": null
+        },
+        {
+          "label": "B",
+          "text": "শ্বেত রক্তকণিকা",
+          "image_filename": null
+        },
+        {
+          "label": "C",
+          "text": "স্নায়ুকোষ",
+          "image_filename": null
+        },
+        {
+          "label": "D",
+          "text": "হৃদকোষ",
+          "image_filename": null
+        }
+      ],
+      "correct_answer": "A",
+      "images": [],
+      "question_region": {
+        "page_index": 0,
+        "box_2d": [
+          760,
+          27,
+          900,
+          492
+        ]
+      }
+    }
+  ]
+}

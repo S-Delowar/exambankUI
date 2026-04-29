@@ -1,0 +1,15 @@
+gemini_model: "gemini-3-flash-preview"
+request_pause_seconds: 2.0
+output_dir: "./data/results"
+render_dpi: 200
+max_pages: 15
+tail_context_chars: 600
+max_upload_mb: 50
+
+# Manual-cropping pipeline. The image-linker pairs Pass-1 [IMAGE_N] tokens
+# with on-disk crops at <manual_crops_dir>/<folder>/page_<N>/imageM.png.
+# Trailing collision suffixes (`_1`, `_2`, ...) on paper_stem are stripped
+# automatically when looking up the alias, so one entry covers re-runs.
+manual_crops_dir: "../test-cropping/cropped_images"
+manual_crops_alias:
+  Dhaka_University_2019-20_unit_A_mcq: "DU-2019-2020-A-Unit"

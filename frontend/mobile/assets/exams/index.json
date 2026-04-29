@@ -1,0 +1,13 @@
+{
+  "exams": [
+    {
+      "file": "Dhaka_University_2010-11_unit_A.json",
+      "source_filename": "Dhaka_University_2010_Unit-A.pdf",
+      "page_count": 2,
+      "university_name": "Dhaka University",
+      "exam_session": "2010-2011",
+      "exam_unit": "A",
+      "question_count": 27
+    }
+  ]
+}

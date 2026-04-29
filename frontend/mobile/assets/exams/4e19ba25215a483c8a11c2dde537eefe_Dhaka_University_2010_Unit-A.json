@@ -1,0 +1,735 @@
+{
+  "source_filename": "Dhaka_University_2010_Unit-A.pdf",
+  "page_count": 2,
+  "questions": [
+    {
+      "university_name": "Dhaka University",
+      "exam_year": 2010,
+      "exam_unit": "A",
+      "subject": "physics",
+      "question_number": "01.",
+      "question_text": "একটি তাপ ইঞ্জিন স্টীমবিন্দু ও $27^\\circ\\text{C}$ তাপমাত্রার মধ্যে কার্যরত। ইঞ্জিনের সর্বাধিক দক্ষতা কত?",
+      "options": [
+        {
+          "label": "A",
+          "text": "29.5%"
+        },
+        {
+          "label": "B",
+          "text": "21.75%"
+        },
+        {
+          "label": "C",
+          "text": "15.52%"
+        },
+        {
+          "label": "D",
+          "text": "19.57%"
+        }
+      ],
+      "correct_answer": "D"
+    },
+    {
+      "university_name": "Dhaka University",
+      "exam_year": 2010,
+      "exam_unit": "A",
+      "subject": "physics",
+      "question_number": "02.",
+      "question_text": "$a$ এর মান কত হলে $\\vec{A} = 2\\hat{i} + a\\hat{j} + \\hat{k}$ এবং $\\vec{B} = 4\\hat{i} - 2\\hat{j} - 2\\hat{k}$ ভেক্টরদ্বয় পরস্পর লম্ব হবে?",
+      "options": [
+        {
+          "label": "A",
+          "text": "1"
+        },
+        {
+          "label": "B",
+          "text": "2"
+        },
+        {
+          "label": "C",
+          "text": "3"
+        },
+        {
+          "label": "D",
+          "text": "4"
+        }
+      ],
+      "correct_answer": "C"
+    },
+    {
+      "university_name": "Dhaka University",
+      "exam_year": 2010,
+      "exam_unit": "A",
+      "subject": "physics",
+      "question_number": "03.",
+      "question_text": "দুইটি বলের লব্ধির মান $40\\,\\text{N}$। বল দুইটির মধ্যে ছোট বলটির মান $30\\,\\text{N}$ এবং এটি লব্ধি বলের লম্ব বরাবর ক্রিয়া করে। বড় বলটির মান কত?",
+      "options": [
+        {
+          "label": "A",
+          "text": "$40\\,\\text{N}$"
+        },
+        {
+          "label": "B",
+          "text": "$45\\,\\text{N}$"
+        },
+        {
+          "label": "C",
+          "text": "$50\\,\\text{N}$"
+        },
+        {
+          "label": "D",
+          "text": "$60\\,\\text{N}$"
+        }
+      ],
+      "correct_answer": "C"
+    },
+    {
+      "university_name": "Dhaka University",
+      "exam_year": 2010,
+      "exam_unit": "A",
+      "subject": "physics",
+      "question_number": "04.",
+      "question_text": "নিম্নের বর্তনীর $R_3$ রোধের মধ্যে বিভব পার্থক্য হচ্ছে— (চিত্রে $V=12\\,\\text{V}, R_1=5\\,\\Omega, R_2=3\\,\\Omega, R_3=6\\,\\Omega, R_4=1\\,\\Omega$)",
+      "options": [
+        {
+          "label": "A",
+          "text": "$5\\,\\text{V}$"
+        },
+        {
+          "label": "B",
+          "text": "$3\\,\\text{V}$"
+        },
+        {
+          "label": "C",
+          "text": "$12\\,\\text{V}$"
+        },
+        {
+          "label": "D",
+          "text": "$6\\,\\text{V}$"
+        }
+      ],
+      "correct_answer": "B"
+    },
+    {
+      "university_name": "Dhaka University",
+      "exam_year": 2010,
+      "exam_unit": "A",
+      "subject": "physics",
+      "question_number": "05.",
+      "question_text": "নিচের কোন চিত্রটি ওহমের সূত্রকে সমর্থন করে?",
+      "options": [
+        {
+          "label": "A",
+          "text": "$I$ বনাম $V$ মূলবিন্দুগামী সরলরেখা"
+        },
+        {
+          "label": "B",
+          "text": "$I$ বনাম $V$ সরলরেখা ($I$ অক্ষ ছেদকারী)"
+        },
+        {
+          "label": "C",
+          "text": "$I$ বনাম $V$ সরলরেখা ($V$ অক্ষ ছেদকারী)"
+        },
+        {
+          "label": "D",
+          "text": "$I$ বনাম $V$ বক্ররেখা"
+        }
+      ],
+      "correct_answer": "A"
+    },
+    {
+      "university_name": "Dhaka University",
+      "exam_year": 2010,
+      "exam_unit": "A",
+      "subject": "physics",
+      "question_number": "06.",
+      "question_text": "চন্দ্রপৃষ্ঠ হতে বিকিরিত সর্বোচ্চ তরঙ্গদৈর্ঘ্য $14\\,\\mu\\text{m}$ হলে, চন্দ্রপৃষ্ঠের তাপমাত্রা কত? [ভীনের সরণ সূত্রের ধ্রুবক $2.9 \\times 10^{-3}\\,\\text{mK}$]",
+      "options": [
+        {
+          "label": "A",
+          "text": "$207.1\\,\\text{K}$"
+        },
+        {
+          "label": "B",
+          "text": "$273\\,\\text{K}$"
+        },
+        {
+          "label": "C",
+          "text": "$207.1^\\circ\\text{C}$"
+        },
+        {
+          "label": "D",
+          "text": "$273^\\circ\\text{F}$"
+        }
+      ],
+      "correct_answer": "A"
+    },
+    {
+      "university_name": "Dhaka University",
+      "exam_year": 2010,
+      "exam_unit": "A",
+      "subject": "physics",
+      "question_number": "07.",
+      "question_text": "$T$ তাপমাত্রার আদর্শ গ্যাসের ক্ষেত্রে একটি অণুর গড় গতিশক্তি—",
+      "options": [
+        {
+          "label": "A",
+          "text": "$\\frac{2}{3}T$"
+        },
+        {
+          "label": "B",
+          "text": "$\\frac{3}{2}kT^2$"
+        },
+        {
+          "label": "C",
+          "text": "$\\frac{3}{2}kT^4$"
+        },
+        {
+          "label": "D",
+          "text": "$\\frac{3}{2}kT$"
+        }
+      ],
+      "correct_answer": "D"
+    },
+    {
+      "university_name": "Dhaka University",
+      "exam_year": 2010,
+      "exam_unit": "A",
+      "subject": "physics",
+      "question_number": "08.",
+      "question_text": "ইয়ং-এর দ্বি-চিড় পরীক্ষায় চিড় দুটির মধ্যবর্তী দূরত্ব $2.0\\,\\text{mm}$। এ চিড় হতে $1\\,\\text{m}$ দূরত্বে পর্দার উপরে ডোরার ব্যবধান $0.295\\,\\text{mm}$ পাওয়া গেলে আলোর তরঙ্গদৈর্ঘ্য বের কর।",
+      "options": [
+        {
+          "label": "A",
+          "text": "$5.90\\,\\text{\\AA}$"
+        },
+        {
+          "label": "B",
+          "text": "$59.0\\,\\text{\\AA}$"
+        },
+        {
+          "label": "C",
+          "text": "$5900\\,\\text{\\AA}$"
+        },
+        {
+          "label": "D",
+          "text": "$59000\\,\\text{\\AA}$"
+        }
+      ],
+      "correct_answer": "C"
+    },
+    {
+      "university_name": "Dhaka University",
+      "exam_year": 2010,
+      "exam_unit": "A",
+      "subject": "physics",
+      "question_number": "09.",
+      "question_text": "একটি $10\\,\\Omega$ রোধকে একটি $E$ তড়িৎচালকবল এবং $r$ অভ্যন্তরীণ রোধ বিশিষ্ট কোষের দুইপ্রান্তে সংযোগ দিলে $0.10\\,\\text{A}$ তড়িৎ বর্তনী দিয়ে প্রবাহিত হয়। $10\\,\\Omega$ রোধকে একটি $3\\,\\Omega$ রোধ দ্বারা প্রতিস্থাপন করলে তড়িৎ প্রবাহ বৃদ্ধি পেয়ে $0.24\\,\\text{A}$ হয়। $r$ এর মান কত?",
+      "options": [
+        {
+          "label": "A",
+          "text": "$12\\,\\Omega$"
+        },
+        {
+          "label": "B",
+          "text": "$1.2\\,\\Omega$"
+        },
+        {
+          "label": "C",
+          "text": "$0.2\\,\\Omega$"
+        },
+        {
+          "label": "D",
+          "text": "$2.0\\,\\Omega$"
+        }
+      ],
+      "correct_answer": "D"
+    },
+    {
+      "university_name": "Dhaka University",
+      "exam_year": 2010,
+      "exam_unit": "A",
+      "subject": "physics",
+      "question_number": "10.",
+      "question_text": "পর্যায়কাল দ্বিগুণ করতে সরল দোলকের দৈর্ঘ্য কতগুণ বৃদ্ধি করতে হবে?",
+      "options": [
+        {
+          "label": "A",
+          "text": "$\\frac{1}{4}$"
+        },
+        {
+          "label": "B",
+          "text": "$\\frac{1}{2}$"
+        },
+        {
+          "label": "C",
+          "text": "2"
+        },
+        {
+          "label": "D",
+          "text": "4"
+        }
+      ],
+      "correct_answer": "D"
+    },
+    {
+      "university_name": "Dhaka University",
+      "exam_year": 2010,
+      "exam_unit": "A",
+      "subject": "physics",
+      "question_number": "11.",
+      "question_text": "একটি দ্বি-পরমাণু বিশিষ্ট গ্যাসের ক্ষেত্রে $C_p/C_v$ হলো—",
+      "options": [
+        {
+          "label": "A",
+          "text": "1.67"
+        },
+        {
+          "label": "B",
+          "text": "1.4"
+        },
+        {
+          "label": "C",
+          "text": "1.33"
+        },
+        {
+          "label": "D",
+          "text": "1.11"
+        }
+      ],
+      "correct_answer": "B"
+    },
+    {
+      "university_name": "Dhaka University",
+      "exam_year": 2010,
+      "exam_unit": "A",
+      "subject": "physics",
+      "question_number": "12.",
+      "question_text": "একটি কণার মোট শক্তি এর স্থিতাবস্থার শক্তির দ্বিগুণ। কণাটির দ্রুতি হলো—",
+      "options": [
+        {
+          "label": "A",
+          "text": "$2.6 \\times 10^8\\,\\text{m/s}$"
+        },
+        {
+          "label": "B",
+          "text": "$2.9 \\times 10^8\\,\\text{m/s}$"
+        },
+        {
+          "label": "C",
+          "text": "$3.0 \\times 10^8\\,\\text{m/s}$"
+        },
+        {
+          "label": "D",
+          "text": "$6.0 \\times 10^8\\,\\text{m/s}$"
+        }
+      ],
+      "correct_answer": "A"
+    },
+    {
+      "university_name": "Dhaka University",
+      "exam_year": 2010,
+      "exam_unit": "A",
+      "subject": "physics",
+      "question_number": "13.",
+      "question_text": "$5000\\,\\text{\\AA}$ তরঙ্গদৈর্ঘ্যের আলোক রশ্মির ফোটনের শক্তি হলো—",
+      "options": [
+        {
+          "label": "A",
+          "text": "$2.48\\,\\text{eV}$"
+        },
+        {
+          "label": "B",
+          "text": "$2.84\\,\\text{eV}$"
+        },
+        {
+          "label": "C",
+          "text": "$4.25\\,\\text{eV}$"
+        },
+        {
+          "label": "D",
+          "text": "$5.1\\,\\text{eV}$"
+        }
+      ],
+      "correct_answer": "A"
+    },
+    {
+      "university_name": "Dhaka University",
+      "exam_year": null,
+      "exam_unit": null,
+      "subject": "chemistry",
+      "question_number": "09.",
+      "question_text": "নিচের কোন সেটটির সব মৌলগুলির ইলেকট্রন বিন্যাসে বিজোড় ইলেকট্রন আছে?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Ca, Sr, Ba"
+        },
+        {
+          "label": "B",
+          "text": "Na, Si, S"
+        },
+        {
+          "label": "C",
+          "text": "Ca, P, Xe"
+        },
+        {
+          "label": "D",
+          "text": "Zn, Mg, N"
+        }
+      ],
+      "correct_answer": "B"
+    },
+    {
+      "university_name": "Dhaka University",
+      "exam_year": null,
+      "exam_unit": null,
+      "subject": "chemistry",
+      "question_number": "10.",
+      "question_text": "$0.002\\text{M}$ সালফিউরিক এসিড দ্রবণের pH হল-",
+      "options": [
+        {
+          "label": "A",
+          "text": "2.70"
+        },
+        {
+          "label": "B",
+          "text": "4.20"
+        },
+        {
+          "label": "C",
+          "text": "2.40"
+        },
+        {
+          "label": "D",
+          "text": "3.00"
+        }
+      ],
+      "correct_answer": "C"
+    },
+    {
+      "university_name": "Dhaka University",
+      "exam_year": null,
+      "exam_unit": null,
+      "subject": "chemistry",
+      "question_number": "11.",
+      "question_text": "$\\ce{N2 + 3H2 -> 2NH3}$ একটি গ্যাসীয় বিক্রিয়া, এতে $K_p$ ও $K_c$ এর সম্পর্ক নিচের কোনটি?",
+      "options": [
+        {
+          "label": "A",
+          "text": "$K_p = K_c(RT)^2$"
+        },
+        {
+          "label": "B",
+          "text": "$K_p = K_c(RT)^{1.5}$"
+        },
+        {
+          "label": "C",
+          "text": "$K_p = K_c(RT)^{-2}$"
+        },
+        {
+          "label": "D",
+          "text": "$K_p = K_c(RT)^3$"
+        }
+      ],
+      "correct_answer": "C"
+    },
+    {
+      "university_name": "Dhaka University",
+      "exam_year": null,
+      "exam_unit": null,
+      "subject": "chemistry",
+      "question_number": "12.",
+      "question_text": "তুতের দ্রবণে $1.0$ ঘণ্টা ধরে $8.0\\text{ ampere}$ বিদ্যুৎ প্রবাহিত করলে তড়িৎদ্বারে কি পরিমাণ $\\ce{Cu}$ জমা পড়বে?",
+      "options": [
+        {
+          "label": "A",
+          "text": "$8.475\\text{g}$"
+        },
+        {
+          "label": "B",
+          "text": "$9.475\\text{g}$"
+        },
+        {
+          "label": "C",
+          "text": "$10.475\\text{g}$"
+        },
+        {
+          "label": "D",
+          "text": "$11.475\\text{g}$"
+        }
+      ],
+      "correct_answer": "B"
+    },
+    {
+      "university_name": "Dhaka University",
+      "exam_year": null,
+      "exam_unit": null,
+      "subject": "chemistry",
+      "question_number": "13.",
+      "question_text": "$18\\text{ g}$ গ্লুকোজ ($\\ce{C6H12O6}$) অণুতে কতটি কার্বন পরমাণু আছে?",
+      "options": [
+        {
+          "label": "A",
+          "text": "$6.0 \\times 10^{23}$"
+        },
+        {
+          "label": "B",
+          "text": "$3.6 \\times 10^{23}$"
+        },
+        {
+          "label": "C",
+          "text": "$6.0 \\times 10^{22}$"
+        },
+        {
+          "label": "D",
+          "text": "$3.6 \\times 10^{24}$"
+        }
+      ],
+      "correct_answer": "B"
+    },
+    {
+      "university_name": "Dhaka University",
+      "exam_year": null,
+      "exam_unit": null,
+      "subject": "chemistry",
+      "question_number": "14.",
+      "question_text": "নিচের কোনটি অসামঞ্জস্যকরণ বিক্রিয়া?",
+      "options": [
+        {
+          "label": "A",
+          "text": "$\\ce{Cl2(g) + 2NaOH(aq) -> NaOCl(aq) + NaCl(aq) + H2O(l)}$"
+        },
+        {
+          "label": "B",
+          "text": "$\\ce{ZnO(s) + H2(g) -> Zn(s) + H2O(l)}$"
+        },
+        {
+          "label": "C",
+          "text": "$\\ce{AgNO3(aq) + HCl(aq) -> AgCl(s) + HNO3(aq)}$"
+        },
+        {
+          "label": "D",
+          "text": "$\\ce{Fe2O3(s) + C(s) -> 2Fe(s) + 3CO(g)}$"
+        }
+      ],
+      "correct_answer": "A"
+    },
+    {
+      "university_name": "Dhaka University",
+      "exam_year": null,
+      "exam_unit": null,
+      "subject": "chemistry",
+      "question_number": "15.",
+      "question_text": "পটাশিয়াম পারম্যাঙ্গানেট-সোডিয়াম অক্সালেট টাইট্রেশনে নিম্নের কোনটি তুমি ব্যবহার করবে?",
+      "options": [
+        {
+          "label": "A",
+          "text": "methyl orange"
+        },
+        {
+          "label": "B",
+          "text": "starch"
+        },
+        {
+          "label": "C",
+          "text": "diphenylamine"
+        },
+        {
+          "label": "D",
+          "text": "no indicator"
+        }
+      ],
+      "correct_answer": "D"
+    },
+    {
+      "university_name": "Dhaka University",
+      "exam_year": null,
+      "exam_unit": null,
+      "subject": "chemistry",
+      "question_number": "16.",
+      "question_text": "নিচের কোনটি অপটিক্যাল আইসোমার দেবে না?",
+      "options": [
+        {
+          "label": "A",
+          "text": "$\\ce{CH3-CH=CH-C2H5}$"
+        },
+        {
+          "label": "B",
+          "text": "$\\ce{CH3CH(OH)COOH}$"
+        },
+        {
+          "label": "C",
+          "text": "$\\ce{C6H5-CH=CH(OH)COOH}$"
+        },
+        {
+          "label": "D",
+          "text": "$\\ce{C6H5CHBrCH3}$"
+        }
+      ],
+      "correct_answer": "A"
+    },
+    {
+      "university_name": "Dhaka University",
+      "exam_year": null,
+      "exam_unit": null,
+      "subject": "chemistry",
+      "question_number": "17.",
+      "question_text": "নিচের কোনটি Wolf-Kishner বিজারণ?",
+      "options": [
+        {
+          "label": "A",
+          "text": "$\\ce{CH3CH=O + Zn-Hg/conc. HCl -> CH3-CH3}$"
+        },
+        {
+          "label": "B",
+          "text": "$\\ce{CH3CH=O + NH2-NH2 + (CH3)3CONa -> CH3-CH3}$"
+        },
+        {
+          "label": "C",
+          "text": "$\\ce{CH3COCH3 + PCl5 -> (CH3)2CCl2 + POCl3}$"
+        },
+        {
+          "label": "D",
+          "text": "$\\ce{CH3CH2CHO + 2Cu^{2+} + 3KOH -> CH3CH2COOK + Cu2O + 2H2O}$"
+        }
+      ],
+      "correct_answer": "B"
+    },
+    {
+      "university_name": "Dhaka University",
+      "exam_year": null,
+      "exam_unit": null,
+      "subject": "chemistry",
+      "question_number": "18.",
+      "question_text": "নিম্নের কোয়ান্টাম সংখ্যাগুলির কোন সেটটি অনুমোদিত নয়?",
+      "options": [
+        {
+          "label": "A",
+          "text": "$n = 1, l = 0, m = 0$"
+        },
+        {
+          "label": "B",
+          "text": "$n = 2, l = 2, m = -1$"
+        },
+        {
+          "label": "C",
+          "text": "$n = 3, l = 2, m = +2$"
+        },
+        {
+          "label": "D",
+          "text": "$n = 4, l = 3, m = -1$"
+        }
+      ],
+      "correct_answer": "B"
+    },
+    {
+      "university_name": "Dhaka University",
+      "exam_year": null,
+      "exam_unit": null,
+      "subject": "chemistry",
+      "question_number": "19.",
+      "question_text": "এসিটিলিনকে $\\ce{CCl4}$ দ্রবণে রেখে তাতে ব্রোমিন গ্যাস চালনা করলে যে উৎপাদ হয়-",
+      "options": [
+        {
+          "label": "A",
+          "text": "$\\ce{Br2CH-CHBr2}$"
+        },
+        {
+          "label": "B",
+          "text": "$\\ce{BrCH=CHBr}$"
+        },
+        {
+          "label": "C",
+          "text": "$\\ce{Br2CH-CHCl2 + CHCl3}$"
+        },
+        {
+          "label": "D",
+          "text": "$\\ce{Cl2CH-CHBr2 + CHBr3}$"
+        }
+      ],
+      "correct_answer": "A"
+    },
+    {
+      "university_name": "Dhaka University",
+      "exam_year": null,
+      "exam_unit": null,
+      "subject": "chemistry",
+      "question_number": "20.",
+      "question_text": "নিম্নের যৌগগুলির মধ্যে কোনটিতে $sp$ ও $sp^3$ সংকরিত $C$ পরমাণু আছে?",
+      "options": [
+        {
+          "label": "A",
+          "text": "$\\ce{CH3C#CH}$"
+        },
+        {
+          "label": "B",
+          "text": "$\\ce{CH2=C=CH2}$"
+        },
+        {
+          "label": "C",
+          "text": "$\\ce{CH3-CH2-CH3}$"
+        },
+        {
+          "label": "D",
+          "text": "$\\ce{CH2=CH2}$"
+        }
+      ],
+      "correct_answer": "A"
+    },
+    {
+      "university_name": "Dhaka University",
+      "exam_year": null,
+      "exam_unit": null,
+      "subject": "chemistry",
+      "question_number": "21.",
+      "question_text": "নিম্নের বিক্রিয়াটির প্রধান উৎপাদ কি? $\\ce{CH2=CH-CHO ->[NaBH4]}$",
+      "options": [
+        {
+          "label": "A",
+          "text": "$\\ce{CH3CH(OH)CH2OH}$"
+        },
+        {
+          "label": "B",
+          "text": "$\\ce{CH2=CHCH2OH}$"
+        },
+        {
+          "label": "C",
+          "text": "$\\ce{CH3CHOHCHO}$"
+        },
+        {
+          "label": "D",
+          "text": "$\\ce{CH3CH2CHO}$"
+        }
+      ],
+      "correct_answer": "B"
+    },
+    {
+      "university_name": "Dhaka University",
+      "exam_year": null,
+      "exam_unit": null,
+      "subject": "chemistry",
+      "question_number": "22.",
+      "question_text": "লোহাকে মরিচার হাত থেকে রক্ষার জন্য কোন ধাতুর প্রলেপ দেয়া হয়?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Zn"
+        },
+        {
+          "label": "B",
+          "text": "Pb"
+        },
+        {
+          "label": "C",
+          "text": "Hg"
+        },
+        {
+          "label": "D",
+          "text": "Ti"
+        }
+      ],
+      "correct_answer": "A"
+    }
+  ]
+}

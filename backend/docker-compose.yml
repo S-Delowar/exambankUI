@@ -1,0 +1,106 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: exambank-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: exambank
+      POSTGRES_PASSWORD: exambank
+      POSTGRES_DB: exambank
+    ports:
+      - "5432:5432"
+    volumes:
+      - exambank_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U exambank -d exambank"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  migrate:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: exambank-migrate
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      DATABASE_URL: postgresql+asyncpg://exambank:exambank@postgres:5432/exambank
+    command: ["alembic", "upgrade", "head"]
+    restart: "no"
+
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: exambank-api
+    restart: unless-stopped
+    depends_on:
+      postgres:
+        condition: service_healthy
+      migrate:
+        condition: service_completed_successfully
+    environment:
+      DATABASE_URL: postgresql+asyncpg://exambank:exambank@postgres:5432/exambank
+      # Pool of Gemini API keys; the extractor rotates on quota errors.
+      # Unset slots are passed through as empty strings and skipped at load time.
+      GEMINI_API_KEY_1: ${GEMINI_API_KEY_1:-}
+      GEMINI_API_KEY_2: ${GEMINI_API_KEY_2:-}
+      GEMINI_API_KEY_3: ${GEMINI_API_KEY_3:-}
+      GEMINI_API_KEY_4: ${GEMINI_API_KEY_4:-}
+      GEMINI_API_KEY_5: ${GEMINI_API_KEY_5:-}
+      GEMINI_API_KEY_6: ${GEMINI_API_KEY_6:-}
+      GEMINI_API_KEY_7: ${GEMINI_API_KEY_7:-}
+      GEMINI_API_KEY_8: ${GEMINI_API_KEY_8:-}
+      GEMINI_API_KEY_9: ${GEMINI_API_KEY_9:-}
+      GEMINI_API_KEY_10: ${GEMINI_API_KEY_10:-}
+      GEMINI_API_KEY_11: ${GEMINI_API_KEY_11:-}
+      GEMINI_API_KEY_12: ${GEMINI_API_KEY_12:-}
+      GEMINI_API_KEY_13: ${GEMINI_API_KEY_13:-}
+      GEMINI_API_KEY_14: ${GEMINI_API_KEY_14:-}
+      GEMINI_API_KEY: ${GEMINI_API_KEY:-}
+      MANUAL_CROPS_DIR: /manual_crops
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./data/results:/app/data/results
+      - ./data/images:/app/data/images
+      - ../test-cropping/cropped_images:/manual_crops:ro
+
+  solution-worker:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: exambank-solution-worker
+    profiles: ["worker"]
+    depends_on:
+      postgres:
+        condition: service_healthy
+      migrate:
+        condition: service_completed_successfully
+    environment:
+      DATABASE_URL: postgresql+asyncpg://exambank:exambank@postgres:5432/exambank
+      GEMINI_API_KEY_1: ${GEMINI_API_KEY_1:-}
+      GEMINI_API_KEY_2: ${GEMINI_API_KEY_2:-}
+      GEMINI_API_KEY_3: ${GEMINI_API_KEY_3:-}
+      GEMINI_API_KEY_4: ${GEMINI_API_KEY_4:-}
+      GEMINI_API_KEY_5: ${GEMINI_API_KEY_5:-}
+      GEMINI_API_KEY_6: ${GEMINI_API_KEY_6:-}
+      GEMINI_API_KEY_7: ${GEMINI_API_KEY_7:-}
+      GEMINI_API_KEY_8: ${GEMINI_API_KEY_8:-}
+      GEMINI_API_KEY_9: ${GEMINI_API_KEY_9:-}
+      GEMINI_API_KEY_10: ${GEMINI_API_KEY_10:-}
+      GEMINI_API_KEY_11: ${GEMINI_API_KEY_11:-}
+      GEMINI_API_KEY_12: ${GEMINI_API_KEY_12:-}
+      GEMINI_API_KEY_13: ${GEMINI_API_KEY_13:-}
+      GEMINI_API_KEY_14: ${GEMINI_API_KEY_14:-}
+      GEMINI_API_KEY: ${GEMINI_API_KEY:-}
+    command: ["python", "-m", "app.solution_worker"]
+    restart: "no"
+    volumes:
+      - ./data/results:/app/data/results
+      - ./data/images:/app/data/images
+
+volumes:
+  exambank_pgdata:

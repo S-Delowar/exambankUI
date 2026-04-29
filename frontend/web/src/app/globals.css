@@ -1,0 +1,52 @@
+@import "katex/dist/katex.min.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-bg: #ffffff;
+  --color-fg: #0f172a;
+  --color-muted: #64748b;
+  --color-border: #e2e8f0;
+  --color-accent: #2563eb;
+  --color-danger: #dc2626;
+}
+
+html, body {
+  background-color: var(--color-bg);
+  color: var(--color-fg);
+  height: 100%;
+}
+
+/* KaTeX Bangla font fallback — KaTeX renders latin glyphs; Bangla falls
+   through to the system stack which handles it fine at this size. */
+.katex, .katex-display {
+  font-size: 1em;
+}
+
+/* Reviewer question blocks — preserve extracted line breaks. */
+.preserve-breaks {
+  white-space: pre-wrap;
+}
+
+/* Long display-math expressions can overflow narrow viewports; let them
+   scroll horizontally rather than blowing out the page width. */
+.katex-display {
+  overflow-x: auto;
+  overflow-y: hidden;
+  max-width: 100%;
+}
+
+/* Prevent any rogue child from forcing a wider-than-viewport body on
+   mobile. Pages still scroll vertically as normal. */
+html, body {
+  overflow-x: hidden;
+}
+
+/* Long unbroken strings (URLs, IDs) shouldn't force horizontal scroll on
+   narrow screens — wrap them. */
+.break-anywhere {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}

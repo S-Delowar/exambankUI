@@ -1,0 +1,113 @@
+# Bangla display labels for chapter keys defined in `chapters.yaml`.
+#
+# This file is for display only. The canonical chapter id remains the
+# English snake_case key in `chapters.yaml`; that is what gets stored in
+# question rows, what Gemini echoes back, and what admin tools edit. The
+# Bangla string here is looked up by the frontend (and any other UI) when
+# rendering a chapter to the user.
+#
+# Subject grouping mirrors `chapters.yaml` purely for human review parity.
+# A chapter key missing from this file falls back to a prettified version
+# of the English key on the frontend, so adding a new chapter to
+# `chapters.yaml` won't crash the UI — it will just look slightly off
+# until it's translated here.
+#
+# Translations follow common NCTB HSC textbook phrasing where one exists.
+# Review before shipping to users.
+
+physics:
+  physical_world_and_measurement: ভৌতজগৎ ও পরিমাপ
+  vector: ভেক্টর
+  dynamics: গতিবিদ্যা
+  newtonian_mechanics: নিউটনীয় বলবিদ্যা
+  work_energy_and_power: কাজ, শক্তি ও ক্ষমতা
+  gravitation_and_gravity: মহাকর্ষ ও অভিকর্ষ
+  structural_properties_of_matter: পদার্থের গাঠনিক ধর্ম
+  periodic_motion: পর্যাবৃত্ত গতি
+  waves: তরঙ্গ
+  ideal_gas_and_gas_kinetics: আদর্শ গ্যাস ও গ্যাসের গতিতত্ত্ব
+  thermodynamics: তাপগতিবিদ্যা
+  static_electricity: স্থির তড়িৎ
+  current_electricity: চল তড়িৎ
+  magnetic_effects_of_electric_current_and_magnetism: চল তড়িতের চৌম্বক ক্রিয়া ও চুম্বকত্ব
+  electromagnetic_induction_and_alternating_current: তড়িৎচৌম্বকীয় আবেশ ও পরিবর্তী প্রবাহ
+  geometrical_optics: জ্যামিতিক আলোকবিজ্ঞান
+  physical_optics: ভৌত আলোকবিজ্ঞান
+  introduction_to_modern_physics: আধুনিক পদার্থবিজ্ঞানের সূচনা
+  atomic_model_and_nuclear_physics: পরমাণুর মডেল ও নিউক্লিয়ার পদার্থবিজ্ঞান
+  semiconductor_and_electronics: অর্ধপরিবাহী ও ইলেকট্রনিক্স
+  astronomy: জ্যোতির্বিজ্ঞান
+
+chemistry:
+  safe_use_of_laboratory: ল্যাবরেটরির নিরাপদ ব্যবহার
+  qualitative_chemistry: গুণগত রসায়ন
+  periodic_properties_of_elements_and_chemical_bonding: মৌলের পর্যায়বৃত্ত ধর্ম ও রাসায়নিক বন্ধন
+  chemical_changes: রাসায়নিক পরিবর্তন
+  vocational_chemistry: কর্মমুখী রসায়ন
+  environmental_chemistry: পরিবেশ রসায়ন
+  organic_chemistry: জৈব রসায়ন
+  quantitative_chemistry: পরিমাণগত রসায়ন
+  electrochemistry: তড়িৎ রসায়ন
+  economic_chemistry: অর্থনৈতিক রসায়ন
+
+mathematics:
+  matrices_and_determinants: ম্যাট্রিক্স ও নির্ণায়ক
+  vectors: ভেক্টর
+  straight_lines: সরলরেখা
+  circles: বৃত্ত
+  permutations_and_combinations: বিন্যাস ও সমাবেশ
+  trigonometric_ratios: ত্রিকোণমিতিক অনুপাত
+  associated_trigonometric_angles: সংশ্লিষ্ট ত্রিকোণমিতিক কোণ
+  functions_and_graphs: ফাংশন ও ফাংশনের লেখচিত্র
+  differential_calculus: অন্তরীকরণ
+  integral_calculus: যোগজীকরণ
+  real_numbers_and_inequalities: বাস্তব সংখ্যা ও অসমতা
+  linear_programming: রৈখিক প্রোগ্রামিং
+  complex_numbers: জটিল সংখ্যা
+  polynomials_and_polynomial_equations: বহুপদী ও বহুপদী সমীকরণ
+  binomial_expansion: দ্বিপদী বিস্তৃতি
+  conics: কণিক
+  inverse_trigonometric_functions_and_trigonometric_equations: বিপরীত ত্রিকোণমিতিক ফাংশন ও ত্রিকোণমিতিক সমীকরণ
+  statics: স্থিতিবিদ্যা
+  dynamics: গতিবিদ্যা
+  measure_of_dispersion_and_probability: বিস্তার পরিমাপ ও সম্ভাবনা
+
+biology:
+  cell_and_its_structure: কোষ ও এর গঠন
+  cell_division: কোষ বিভাজন
+  cell_chemistry: কোষ রসায়ন
+  microorganisms: অণুজীব
+  algae_and_fungi: শৈবাল ও ছত্রাক
+  bryophyta_and_pteridophyta: ব্রায়োফাইটা ও টেরিডোফাইটা
+  gymnosperms_and_angiosperms: নগ্নবীজী ও আবৃতবীজী উদ্ভিদ
+  tissue_and_tissue_system: টিস্যু ও টিস্যুতন্ত্র
+  plant_physiology: উদ্ভিদ শারীরবিজ্ঞান
+  plant_reproduction: উদ্ভিদ প্রজনন
+  biotechnology: জীবপ্রযুক্তি
+  environment_expansion_and_conservation_of_organisms: জীবের পরিবেশ, বিস্তার ও সংরক্ষণ
+  animal_diversity_and_classification: প্রাণীবৈচিত্র্য ও শ্রেণিবিন্যাস
+  animal_identity: প্রাণীর পরিচিতি
+  # Human-physiology values use a colon — quoted to keep YAML happy.
+  human_physiology_digestion_and_absorption: "মানব শারীরবিজ্ঞান: পরিপাক ও শোষণ"
+  human_physiology_blood_and_circulation: "মানব শারীরবিজ্ঞান: রক্ত ও সংবহন"
+  human_physiology_breathing_and_respiration: "মানব শারীরবিজ্ঞান: শ্বসন ও শ্বাসক্রিয়া"
+  human_physiology_waste_and_excretion: "মানব শারীরবিজ্ঞান: বর্জ্য ও রেচন"
+  human_physiology_locomotion_and_movement: "মানব শারীরবিজ্ঞান: চলন ও অঙ্গচালনা"
+  human_physiology_coordination_and_control: "মানব শারীরবিজ্ঞান: সমন্বয় ও নিয়ন্ত্রণ"
+  continuation_of_human_life: মানবজীবনের ধারাবাহিকতা
+  immunity_of_human_body: মানবদেহের অনাক্রম্যতা
+  genetics_and_evolution: বংশগতি ও বিবর্তন
+  animal_behavior: প্রাণীর আচরণ
+
+bangla:
+  grammar: ব্যাকরণ
+  literature: সাহিত্য
+  vocabulary: শব্দভাণ্ডার
+  comprehension: পঠন বোধ
+
+english:
+  grammar: Grammar
+  literature: Literature
+  vocabulary: Vocabulary
+  comprehension: Comprehension
+  writing: Writing

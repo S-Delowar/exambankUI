@@ -1,0 +1,16 @@
+fastapi>=0.115
+uvicorn[standard]>=0.30
+python-multipart>=0.0.9
+pydantic[email]>=2.8
+pydantic-settings>=2.4
+pyyaml>=6.0
+pymupdf>=1.24
+google-genai>=0.3
+python-dotenv>=1.0
+sqlalchemy[asyncio]>=2.0
+asyncpg>=0.29
+alembic>=1.13
+pwdlib[argon2]>=0.2.0
+pyjwt>=2.8
+Pillow
+reportlab>=4.0

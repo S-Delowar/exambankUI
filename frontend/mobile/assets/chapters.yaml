@@ -1,0 +1,122 @@
+# HSC-level chapter taxonomy for Bangladeshi admission-test MCQs.
+#
+# Structure: subject -> paper_1 | paper_2 -> [chapter_key, ...]
+#
+# - `paper_1` / `paper_2` is authoring scaffolding only. The prompt layer
+#   flattens this to a plain `subject -> [chapters]` list before injection,
+#   so the model never sees the paper grouping.
+# - `chapter_key` is lowercase snake_case. This exact string is what Gemini
+#   must echo back in `Question.chapter`. Adding/renaming a chapter is a
+#   one-line edit here; no code change.
+# - Subjects without a 1st/2nd paper split (bangla, english) use a flat list.
+# - Chapter order here preserves NCTB curriculum order; number labels are not
+#   stored — derive from list position if needed in the UI.
+# - Different subjects may legitimately share a chapter name (e.g. physics and
+#   mathematics both have `vectors`). `chapter` is interpreted relative to the
+#   question's `subject`, so no collision.
+#
+# Source: NCTB HSC syllabus (authoritative list supplied by the project owner).
+
+physics:
+  paper_1:
+    - physical_world_and_measurement
+    - vector
+    - dynamics
+    - newtonian_mechanics
+    - work_energy_and_power
+    - gravitation_and_gravity
+    - structural_properties_of_matter
+    - periodic_motion
+    - waves
+    - ideal_gas_and_gas_kinetics
+  paper_2:
+    - thermodynamics
+    - static_electricity
+    - current_electricity
+    - magnetic_effects_of_electric_current_and_magnetism
+    - electromagnetic_induction_and_alternating_current
+    - geometrical_optics
+    - physical_optics
+    - introduction_to_modern_physics
+    - atomic_model_and_nuclear_physics
+    - semiconductor_and_electronics
+    - astronomy
+
+chemistry:
+  paper_1:
+    - safe_use_of_laboratory
+    - qualitative_chemistry
+    - periodic_properties_of_elements_and_chemical_bonding
+    - chemical_changes
+    - vocational_chemistry
+  paper_2:
+    - environmental_chemistry
+    - organic_chemistry
+    - quantitative_chemistry
+    - electrochemistry
+    - economic_chemistry
+
+mathematics:
+  paper_1:
+    - matrices_and_determinants
+    - vectors
+    - straight_lines
+    - circles
+    - permutations_and_combinations
+    - trigonometric_ratios
+    - associated_trigonometric_angles
+    - functions_and_graphs
+    - differential_calculus
+    - integral_calculus
+  paper_2:
+    - real_numbers_and_inequalities
+    - linear_programming
+    - complex_numbers
+    - polynomials_and_polynomial_equations
+    - binomial_expansion
+    - conics
+    - inverse_trigonometric_functions_and_trigonometric_equations
+    - statics
+    - dynamics
+    - measure_of_dispersion_and_probability
+
+biology:
+  paper_1:
+    - cell_and_its_structure
+    - cell_division
+    - cell_chemistry
+    - microorganisms
+    - algae_and_fungi
+    - bryophyta_and_pteridophyta
+    - gymnosperms_and_angiosperms
+    - tissue_and_tissue_system
+    - plant_physiology
+    - plant_reproduction
+    - biotechnology
+    - environment_expansion_and_conservation_of_organisms
+  paper_2:
+    - animal_diversity_and_classification
+    - animal_identity
+    - human_physiology_digestion_and_absorption
+    - human_physiology_blood_and_circulation
+    - human_physiology_breathing_and_respiration
+    - human_physiology_waste_and_excretion
+    - human_physiology_locomotion_and_movement
+    - human_physiology_coordination_and_control
+    - continuation_of_human_life
+    - immunity_of_human_body
+    - genetics_and_evolution
+    - animal_behavior
+
+bangla:
+  - grammar
+  - literature
+  - vocabulary
+  - comprehension
+
+english:
+  - grammar
+  - vocabulary
+  - literature
+  - comprehension
+  - writing
