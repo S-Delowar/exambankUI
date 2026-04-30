@@ -20,4 +20,4 @@ jobs:
         env:
           GIT_USERNAME: "s-delowar"
           GIT_TOKEN: ${{ secrets.FRONTENT_GITHUB_TOKEN }}
-          GIT_REPO: "https://github.com/S-Delowar/exambankUI.git"
+          GIT_REPO: "github.com/S-Delowar/exambankUI.git"
