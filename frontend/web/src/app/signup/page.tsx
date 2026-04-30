@@ -2,10 +2,10 @@
 
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
-import { FormEvent, useState } from "react";
+import { FormEvent, useState, Suspense } from "react";
 import { useAuth } from "@/lib/AuthContext";
 
-export default function SignupPage() {
+function SignupForm() {
   const { signup } = useAuth();
   const router = useRouter();
   const search = useSearchParams();
@@ -97,5 +97,13 @@ export default function SignupPage() {
         </Link>
       </p>
     </div>
+  );
+}
+
+export default function SignupPage() {
+  return (
+    <Suspense fallback={<div className="max-w-md mx-auto px-4 py-12">Loading...</div>}>
+      <SignupForm />
+    </Suspense>
   );
 }
