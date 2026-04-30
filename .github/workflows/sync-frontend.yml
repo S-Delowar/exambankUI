@@ -1,0 +1,29 @@
+name: Sync Frontend to External Repo
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "frontend/web/**"
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - name: Pushes to another repository
+        uses: cpina/github-action-push-to-another-repository@main
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.FRONTENT_GITHUB_TOKEN }}
+        with:
+          source-directory: "frontend/web"
+          destination-github-username: "s-delowar" # REPLACE WITH TARGET USERNAME
+          destination-repository-name: "exambankUI" # REPLACE WITH TARGET REPO NAME
+          user-email: "sahed.delowar@gmail.com" # REPLACE WITH YOUR EMAIL
+          target-branch: main
+          target-directory: "."
