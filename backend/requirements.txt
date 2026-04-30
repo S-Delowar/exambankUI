@@ -14,3 +14,4 @@ pwdlib[argon2]>=0.2.0
 pyjwt>=2.8
 Pillow
 reportlab>=4.0
+psycopg2
