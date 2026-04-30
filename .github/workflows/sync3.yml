@@ -12,17 +12,13 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v4
         with:
-          # Fetches all history so the push to the other repo is seamless
           fetch-depth: 0
+          persist-credentials: false
 
       - name: Push to External Repo
         run: |
-          # 1. Add the second account's repo as a 'destination' remote
-          # The token is injected into the URL for authentication
+          git config --local --unset-all http.https://github.com/.extraheader || true
           git remote add destination "https://${GIT_USERNAME}:${GIT_TOKEN}@${GIT_REPO}"
-
-          # 2. Push the main branch to the destination
-          # Using --force ensures the destination matches your source exactly
           git push destination main --force
         env:
           GIT_USERNAME: "s-delowar"
