@@ -367,7 +367,11 @@ function QuestionCard({
                 />
                 {o.image_filename ? (
                   <img
-                    src={`${process.env.NEXT_PUBLIC_API_BASE_URL || "http://localhost:8000"}/exams/${question.paper_id}/images/${o.image_filename}`}
+                    src={
+                      o.image_filename.startsWith('http')
+                        ? o.image_filename
+                        : `${process.env.NEXT_PUBLIC_API_BASE_URL || "http://localhost:8000"}/exams/${question.paper_id}/images/${o.image_filename}`
+                    }
                     alt=""
                     className="mt-2 h-24 w-auto max-w-full object-contain"
                   />
