@@ -11,7 +11,26 @@ class Base(DeclarativeBase):
 
 
 _settings = get_settings()
-engine = create_async_engine(_settings.database_url, echo=False, pool_pre_ping=True)
+
+db_url = _settings.database_url
+if db_url.startswith("postgres://"):
+    db_url = db_url.replace("postgres://", "postgresql+asyncpg://", 1)
+elif db_url.startswith("postgresql://"):
+    db_url = db_url.replace("postgresql://", "postgresql+asyncpg://", 1)
+
+connect_args = {}
+if "?" in db_url:
+    # Strip all query parameters (like sslmode=require&channel_binding=require)
+    # because asyncpg doesn't accept them in the URL string directly.
+    db_url = db_url.split("?")[0]
+    connect_args["ssl"] = "require"
+
+engine = create_async_engine(
+    db_url, 
+    echo=False, 
+    pool_pre_ping=True,
+    connect_args=connect_args
+)
 SessionLocal = async_sessionmaker(engine, class_=AsyncSession, expire_on_commit=False)
 
 
