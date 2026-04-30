@@ -1,0 +1,30 @@
+name: Sync to External Repository
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+        with:
+          # Fetches all history so the push to the other repo is seamless
+          fetch-depth: 0
+
+      - name: Push to External Repo
+        run: |
+          # 1. Add the second account's repo as a 'destination' remote
+          # The token is injected into the URL for authentication
+          git remote add destination "https://${GIT_USERNAME}:${GIT_TOKEN}@${GIT_REPO}"
+
+          # 2. Push the main branch to the destination
+          # Using --force ensures the destination matches your source exactly
+          git push destination main --force
+        env:
+          GIT_USERNAME: "s-delowar"
+          GIT_TOKEN: ${{ secrets.S_DELOWAR_TOKEN }}
+          GIT_REPO: "github.com/S-Delowar/exambankUI.git"

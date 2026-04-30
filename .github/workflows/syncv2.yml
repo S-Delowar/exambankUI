@@ -1,23 +1,24 @@
-name: Sync to External Repository
+# name: Sync to External Repository
 
-on:
-  push:
-    branches:
-      - main
+# on:
+#   push:
+#     branches:
+#       - main
 
-jobs:
-  sync:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
+# jobs:
+#   sync:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - uses: actions/checkout@v4
+#         with:
+#           fetch-depth: 0
 
-      - name: Push to External Repo
-        run: |
-          git remote add destination https://s-delowar:${S_DELOWAR_TOKEN}@${GIT_REPO}
-          git push destination main --force
-        env:
-          GIT_USERNAME: "s-delowar"
-          GIT_TOKEN: ${{ secrets.S_DELOWAR_TOKEN }}
-          GIT_REPO: "github.com/S-Delowar/exambankUI.git"
+#       - name: Push to External Repo
+#         run: |
+#           git remote add destination https://s-delowar:${S_DELOWAR_TOKEN}@${GIT_REPO}
+#           git push destination main --force
+#         env:
+#           GIT_USERNAME: "s-delowar"
+#           GIT_TOKEN: ${{ secrets.S_DELOWAR_TOKEN }}
+#           GIT_REPO: "github.com/S-Delowar/exambankUI.git"
+
