@@ -15,9 +15,9 @@ jobs:
 
       - name: Push to External Repo
         run: |
-          git remote add destination https://s-delowar:${GIT_TOKEN}@${GIT_REPO}
+          git remote add destination https://s-delowar:${S_DELOWAR_TOKEN}@${GIT_REPO}
           git push destination main --force
         env:
           GIT_USERNAME: "s-delowar"
-          GIT_TOKEN: ${{ secrets.FRONTENT_GITHUB_TOKEN }}
+          GIT_TOKEN: ${{ secrets.S_DELOWAR_TOKEN }}
           GIT_REPO: "github.com/S-Delowar/exambankUI.git"
