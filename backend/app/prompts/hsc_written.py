@@ -23,6 +23,7 @@ from .shared import (
     format_scoped_taxonomy,
     format_subjects_list,
 )
+from .subject_addendums import SUBJECT_ADDENDUMS
 
 
 _FIXED_SUBJECT_HEADER = (
@@ -40,10 +41,19 @@ Extract every complete creative question visible on this page into the provided 
 
 SHAPE (CRITICAL — never deviate)
 Every creative question consists of:
-  1. An UDDIPAK (উদ্দীপক) — a stimulus passage, scenario, figure, table, or graph at the top.
-  2. Exactly 4 sub-questions labelled (a), (b), (c), (d) below the uddipak, with fixed marks 1, 2, 3, 4.
+  1. An UDDIPOK (উদ্দীপক) — a stimulus passage, scenario, figure, table, or graph at the top.
+  2. Exactly 4 sub-questions labelled (a), (b), (c), (d) below the uddipok, with fixed marks 1, 2, 3, 4.
 Even if the paper uses different labels (ক/খ/গ/ঘ, i/ii/iii/iv, 1/2/3/4), MAP them by position: first → "a"/1, second → "b"/2, third → "c"/3, fourth → "d"/4.
 Marks are ALWAYS 1/2/3/4 for a/b/c/d in that order, regardless of what's printed. If a question has fewer than 4 sub-parts or more than 4, DO NOT emit it — it's either malformed or a non-creative question.
+
+UDDIPOKS
+Extract each uddipok into the `uddipoks` array with a unique ID like "UDDIPOK_1", "UDDIPOK_2", etc. Questions reference their uddipok via `uddipok_id`. If multiple questions share the same uddipok (rare but possible), use the SAME uddipok_id for all of them.
+
+FIELDS PER UDDIPOK
+- uddipok_id: unique identifier like "UDDIPOK_1", "UDDIPOK_2"
+- text: full uddipok text with [IMAGE_N] tokens for embedded figures
+- has_image: true if text contains [IMAGE_N] tokens, else false
+- images: image metadata (same format as question images)
 
 FIELDS PER QUESTION
 - board_name: HSC board, normalised English ("Dhaka Board", "Rajshahi Board", etc.). Null if not printed.
@@ -51,8 +61,7 @@ FIELDS PER QUESTION
 - subject: {subject_field_instruction}
 - subject_paper: "1" or "2". {paper_field_instruction}
 - question_number: as printed ("১", "1", "৭", etc.).
-- uddipak_text: the FULL stimulus text (passage / scenario). Apply MATH & CHEMISTRY rules. If the uddipak includes a figure/diagram/graph/chart, insert the literal `[IMAGE]` token at the exact position — do NOT describe the image.
-- uddipak_has_image: true iff uddipak_text contains one or more `[IMAGE]` tokens, else false.
+- uddipok_id: reference to uddipok ID (e.g., "UDDIPOK_1"). Every written question has an uddipok.
 - sub_questions: array of EXACTLY 4 objects, in order a → b → c → d:
     [
       {{ "label": "a", "marks": 1, "text": "..." }},
@@ -119,7 +128,7 @@ def _paper_field_instruction(
 def build_system_prompt(
     subjects: tuple[str, ...], subject_paper: str | None
 ) -> str:
-    return _TEMPLATE.format(
+    prompt = _TEMPLATE.format(
         subject_header_block=_subject_header_block(subjects, subject_paper),
         subject_field_instruction=_subject_field_instruction(subjects),
         paper_field_instruction=_paper_field_instruction(subjects, subject_paper),
@@ -129,6 +138,12 @@ def build_system_prompt(
         stitching=STITCHING_BLOCK,
         format_block=FORMAT_BLOCK,
     )
+    
+    # Inject subject-specific addendum for single-subject uploads
+    if len(subjects) == 1 and subjects[0] in SUBJECT_ADDENDUMS:
+        prompt += "\n\n" + SUBJECT_ADDENDUMS[subjects[0]]
+    
+    return prompt
 
 
 def build_user_prompt(

@@ -14,19 +14,39 @@ def latch_metadata(
     questions: list[Any],
     keys: tuple[str, ...],
 ) -> None:
-    """First-write-wins: latch each missing key in `known` from the first
-    question that has it populated.
+    """Latch and update metadata from questions.
 
     After every page's questions are parsed, this is called with the full
-    questions list + the fields we want to propagate. Once a field is set,
-    subsequent pages don't overwrite it.
+    questions list + the fields we want to propagate.
+    
+    Behavior:
+    - First write: Sets the initial value from the first question that has it
+    - Subsequent writes: If a question has a DIFFERENT non-null value, updates
+      the known dict and logs the change. This allows the pipeline to handle
+      PDFs with multiple exams (different boards/years/universities).
+    - Null values: Ignored (won't overwrite known values)
+    
+    The updated `known` dict is then passed to subsequent pages as context,
+    and backfill_metadata uses it to fill any null values on questions.
     """
     for q in questions:
         for key in keys:
+            val = getattr(q, key, None)
+            
+            if val is None:
+                # Question doesn't have this metadata, skip
+                continue
+            
             if known.get(key) is None:
-                val = getattr(q, key, None)
-                if val:
-                    known[key] = val
+                # First write: latch the value
+                known[key] = val
+            elif val != known[key]:
+                # Metadata changed: update and log
+                logger.info(
+                    f"📋 Metadata transition: {key} changed from "
+                    f"{known[key]!r} to {val!r} (multi-exam PDF detected)"
+                )
+                known[key] = val
 
 
 def backfill_metadata(

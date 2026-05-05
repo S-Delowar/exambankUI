@@ -4,7 +4,7 @@
 // `Authorization: Bearer …` and trigger refresh on 401 without going through
 // any hook. AuthContext.tsx subscribes to changes for re-renders.
 
-import { API_BASE_URL } from "./api";
+import { API_BASE_URL } from "./constants";
 
 export interface AuthUser {
   id: string;

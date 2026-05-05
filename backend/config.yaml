@@ -10,6 +10,6 @@ max_upload_mb: 50
 # with on-disk crops at <manual_crops_dir>/<folder>/page_<N>/imageM.png.
 # Trailing collision suffixes (`_1`, `_2`, ...) on paper_stem are stripped
 # automatically when looking up the alias, so one entry covers re-runs.
-manual_crops_dir: "../test-cropping/cropped_images"
+manual_crops_dir: "./data/cropped_images"
 manual_crops_alias:
   Dhaka_University_2019-20_unit_A_mcq: "DU-2019-2020-A-Unit"

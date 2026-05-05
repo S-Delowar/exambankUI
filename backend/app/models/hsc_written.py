@@ -42,9 +42,12 @@ class HscWrittenQuestion(Base):
     subject: Mapped[str | None] = mapped_column(String(64), nullable=True, index=True)
     subject_paper: Mapped[str | None] = mapped_column(String(2), nullable=True, index=True)
 
-    uddipak_text: Mapped[str] = mapped_column(Text, nullable=False)
-    uddipak_has_image: Mapped[bool] = mapped_column(
-        Boolean, nullable=False, server_default="false", default=False, index=True
+    uddipok_id: Mapped[uuid.UUID] = mapped_column(
+        UUID(as_uuid=True),
+        ForeignKey("uddipoks.id", ondelete="CASCADE"),
+        nullable=False,
+        index=True,
+        comment="Reference to uddipok (stimulus passage) - required for written questions",
     )
     images: Mapped[list | None] = mapped_column(
         JSONB, nullable=True, server_default=None

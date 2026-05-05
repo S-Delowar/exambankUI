@@ -202,7 +202,8 @@ function AdminNav() {
         </Link>
         <div className="hidden md:flex items-center gap-6">
           <NavLink href="/admin/quizzes">Quizzes</NavLink>
-          <NavLink href="/admin/upload">Upload</NavLink>
+          <NavLink href="/admin/workflow">Workflow</NavLink>
+          <NavLink href="/admin/upload">Extract</NavLink>
           <NavLink href="/admin/jobs">Jobs</NavLink>
           <NavLink href="/dashboard">↩ Student view</NavLink>
         </div>
@@ -218,8 +219,11 @@ function AdminNav() {
             <NavLink href="/admin/quizzes" onClick={close}>
               Quizzes
             </NavLink>
+            <NavLink href="/admin/workflow" onClick={close}>
+              Workflow
+            </NavLink>
             <NavLink href="/admin/upload" onClick={close}>
-              Upload
+              Extract
             </NavLink>
             <NavLink href="/admin/jobs" onClick={close}>
               Jobs

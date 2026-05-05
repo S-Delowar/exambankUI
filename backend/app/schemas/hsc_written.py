@@ -12,6 +12,7 @@ from typing import Literal, Optional
 from pydantic import BaseModel, Field
 
 from .common import QuestionImage, QuestionRegion
+from .uddipok import Uddipok
 
 
 class HscWrittenSubpart(BaseModel):
@@ -35,17 +36,12 @@ class HscWrittenQuestion(BaseModel):
     question_number: str = Field(
         ..., description="Question number as printed (e.g. '১', '1', '৭')."
     )
-    uddipak_text: str = Field(
+    uddipok_id: str = Field(
         ...,
         description=(
-            "The stimulus passage/figure above the 4 sub-questions. Apply math/chemistry "
-            "rules. Insert the literal `[IMAGE]` token at the exact position of any "
-            "diagram/graph/figure — do not describe the image."
+            "Reference to uddipok ID (e.g., 'UDDIPOK_1'). Every written question has "
+            "an uddipok. Extract the uddipok into the uddipoks array and reference it here."
         ),
-    )
-    uddipak_has_image: bool = Field(
-        False,
-        description="True if uddipak_text contains one or more `[IMAGE]` tokens.",
     )
     sub_questions: list[HscWrittenSubpart] = Field(
         ...,
@@ -80,6 +76,13 @@ class HscWrittenQuestion(BaseModel):
 
 
 class HscWrittenPageExtraction(BaseModel):
+    uddipoks: list[Uddipok] = Field(
+        default_factory=list,
+        description=(
+            "All uddipoks (stimulus passages) on this page. Every written question "
+            "references an uddipok via uddipok_id."
+        ),
+    )
     questions: list[HscWrittenQuestion] = Field(default_factory=list)
     tail_text: str = Field(
         "",

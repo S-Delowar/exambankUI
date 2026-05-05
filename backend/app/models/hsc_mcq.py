@@ -29,6 +29,13 @@ class HscMcqQuestion(Base):
         nullable=False,
         index=True,
     )
+    uddipok_id: Mapped[uuid.UUID | None] = mapped_column(
+        UUID(as_uuid=True),
+        ForeignKey("uddipoks.id", ondelete="SET NULL"),
+        nullable=True,
+        index=True,
+        comment="Reference to uddipok (stimulus passage) if this question has one",
+    )
     question_number: Mapped[str] = mapped_column(String(32), nullable=False)
     question_text: Mapped[str] = mapped_column(Text, nullable=False)
 

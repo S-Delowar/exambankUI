@@ -6,9 +6,11 @@ from fastapi.middleware.cors import CORSMiddleware
 from .routers import (
     admin_attempts,
     admin_quizzes,
+    admin_workflow,
     attempts,
     auth,
     bookmarks,
+    crop,
     drill,
     exams,
     extract,
@@ -44,6 +46,8 @@ async def health() -> dict:
 
 
 app.include_router(extract.router)
+app.include_router(crop.router)
+app.include_router(admin_workflow.router)
 app.include_router(questions.router)
 app.include_router(auth.router)
 app.include_router(exams.router)

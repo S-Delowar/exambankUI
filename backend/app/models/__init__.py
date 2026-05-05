@@ -15,7 +15,9 @@ from .hsc_mcq import HscMcqOption, HscMcqQuestion
 from .hsc_written import HscWrittenQuestion, HscWrittenSubpart
 from .paper import ExamPaper
 from .quiz import QuizStatus
+from .uddipok import Uddipok
 from .user import Attempt, AttemptAnswer, Bookmark, RefreshToken, User
+from .workflow import ExtractionWorkflow
 
 # Legacy aliases (pre-split): several call sites used to import `Question` and
 # `QuestionOption` directly. Point them at the admission-MCQ equivalents so
@@ -26,6 +28,7 @@ QuestionOption = AdmissionMcqOption
 __all__ = [
     "Base",
     "ExamPaper",
+    "Uddipok",
     "AdmissionMcqQuestion",
     "AdmissionMcqOption",
     "AdmissionWrittenQuestion",
@@ -39,6 +42,7 @@ __all__ = [
     "Attempt",
     "AttemptAnswer",
     "QuizStatus",
+    "ExtractionWorkflow",
     # Legacy aliases
     "Question",
     "QuestionOption",

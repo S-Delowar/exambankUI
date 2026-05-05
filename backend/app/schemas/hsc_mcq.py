@@ -11,9 +11,18 @@ from typing import Literal, Optional
 from pydantic import BaseModel, Field
 
 from .common import Option, QuestionImage, QuestionRegion
+from .uddipok import Uddipok
 
 
 class HscMcqQuestion(BaseModel):
+    uddipok_id: Optional[str] = Field(
+        None,
+        description=(
+            "Reference to uddipok ID (e.g., 'UDDIPOK_1') if this question is preceded by "
+            "an uddipok (উদ্দীপক) stimulus passage. Multiple questions can share the same "
+            "uddipok_id. Null if question has no uddipok."
+        ),
+    )
     board_name: Optional[str] = Field(
         None,
         description=(
@@ -64,6 +73,14 @@ class HscMcqQuestion(BaseModel):
 
 
 class HscMcqPageExtraction(BaseModel):
+    uddipoks: list[Uddipok] = Field(
+        default_factory=list,
+        description=(
+            "All uddipoks (stimulus passages) on this page. Questions reference these "
+            "via uddipok_id. Extract each unique uddipok once, even if multiple questions "
+            "share it."
+        ),
+    )
     questions: list[HscMcqQuestion] = Field(default_factory=list)
     tail_text: str = Field("")
     last_question_incomplete: bool = Field(False)

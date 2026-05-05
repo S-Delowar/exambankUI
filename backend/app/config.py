@@ -35,10 +35,10 @@ class Settings(BaseSettings):
     tail_context_chars: int = 600
     max_upload_mb: int = 50
 
-    # Manual-cropping pipeline (test-cropping/crop_figures_batch.py).
+    # Manual-cropping pipeline (backend/data/cropped_images).
     # `manual_crops_dir` holds per-PDF folders of pre-cropped figures the
     # extractor's image-linker pairs to Pass-1 [IMAGE_N] tokens.
-    manual_crops_dir: str = "../test-cropping/cropped_images"
+    manual_crops_dir: str = "./data/cropped_images"
     # Optional explicit map from extracted paper_stem → manual-crop subfolder
     # name (e.g. "Dhaka_University_2019-20_unit_A_mcq" → "DU-2019-2020-A-Unit").
     # Falls back to direct stem match if a key is missing.

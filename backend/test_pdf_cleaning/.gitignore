@@ -1,0 +1,7 @@
+# Ignore input and output PDFs (user data)
+input/*.pdf
+output/*.pdf
+
+# Keep directory structure
+!input/.gitkeep
+!output/.gitkeep

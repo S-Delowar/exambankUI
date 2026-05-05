@@ -18,6 +18,7 @@ from .shared import (
     format_scoped_taxonomy,
     format_subjects_list,
 )
+from .subject_addendums import SUBJECT_ADDENDUMS
 
 
 _FIXED_SUBJECT_HEADER = (
@@ -33,7 +34,22 @@ _TEMPLATE = """You are an expert extractor of MCQs from scanned pages of Banglad
 TASK
 Extract every complete multiple-choice question visible on this page into the provided JSON schema.
 
+UDDIPOKS (উদ্দীপক)
+Some questions are preceded by an UDDIPOK — a stimulus passage, scenario, or context paragraph that provides information for one or more questions. When you encounter an uddipok:
+1. Extract it into the `uddipoks` array with a unique ID like "UDDIPOK_1", "UDDIPOK_2", etc.
+2. Set `uddipok_id` on each question that references this uddipok
+3. If multiple questions share the same uddipok, use the SAME uddipok_id for all of them
+4. Apply MATH & CHEMISTRY formatting rules to uddipok text
+5. If the uddipok contains a figure/diagram, insert [IMAGE_N] token at the exact position
+
+FIELDS PER UDDIPOK
+- uddipok_id: unique identifier like "UDDIPOK_1", "UDDIPOK_2"
+- text: full uddipok text with [IMAGE_N] tokens for embedded figures
+- has_image: true if text contains [IMAGE_N] tokens, else false
+- images: image metadata (same format as question images)
+
 FIELDS PER QUESTION
+- uddipok_id: reference to uddipok ID if this question has one, else null
 - board_name: the HSC education board, normalised to English — e.g. "Dhaka Board", "Rajshahi Board", "Jessore Board", "Comilla Board", "Chittagong Board", "Barisal Board", "Sylhet Board", "Dinajpur Board", "Mymensingh Board", "Madrasah Board". The page may print it in Bangla ("ঢাকা বোর্ড") — still return English. If only "BOARD" or abbreviation appears, use the English form. Null only if truly not printed.
 - exam_year: the single 4-digit year as printed, e.g. "2023". HSC exam papers print a single year, not a session range. Null if not printed.
 - subject: lowercase snake_case. {subject_field_instruction}
@@ -101,7 +117,7 @@ def _paper_field_instruction(
 def build_system_prompt(
     subjects: tuple[str, ...], subject_paper: str | None
 ) -> str:
-    return _TEMPLATE.format(
+    prompt = _TEMPLATE.format(
         subject_header_block=_subject_header_block(subjects, subject_paper),
         subject_field_instruction=_subject_field_instruction(subjects),
         paper_field_instruction=_paper_field_instruction(subjects, subject_paper),
@@ -111,6 +127,12 @@ def build_system_prompt(
         stitching=STITCHING_BLOCK,
         format_block=FORMAT_BLOCK,
     )
+    
+    # Inject subject-specific addendum for single-subject uploads
+    if len(subjects) == 1 and subjects[0] in SUBJECT_ADDENDUMS:
+        prompt += "\n\n" + SUBJECT_ADDENDUMS[subjects[0]]
+    
+    return prompt
 
 
 def build_user_prompt(

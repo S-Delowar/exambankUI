@@ -66,6 +66,7 @@ services:
     volumes:
       - ./data/results:/app/data/results
       - ./data/images:/app/data/images
+      - ./data/workflows:/app/data/workflows
       - ../test-cropping/cropped_images:/manual_crops:ro
 
   solution-worker:
