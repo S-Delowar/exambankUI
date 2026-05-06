@@ -91,13 +91,15 @@ async def clean_pdf_endpoint(
     
     try:
         # Read original PDF
-        pdf_bytes = Path(workflow.original_pdf_path).read_bytes()
+        original_path = Path(workflow.original_pdf_path)
+        pdf_bytes = original_path.read_bytes()
         
         # Clean PDF
         cleaned_bytes = clean_pdf(pdf_bytes)
         
-        # Save cleaned PDF
-        cleaned_path = Path(workflow.original_pdf_path).parent / "cleaned.pdf"
+        # Save cleaned PDF with original filename + _cleaned suffix
+        original_name = original_path.stem  # filename without extension
+        cleaned_path = original_path.parent / f"{original_name}_cleaned.pdf"
         cleaned_path.write_bytes(cleaned_bytes)
         
         # Update workflow

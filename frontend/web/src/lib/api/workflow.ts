@@ -56,8 +56,9 @@ export async function cropImages(workflowId: string, file: File | null, paperNam
   return request<{
     workflow_id: string;
     crop_folder: string;
-    pages_with_figures: string[];
+    pages_with_figures: number;
     total_figures: number;
+    pages_processed: number;
     next_step: string;
   }>(`/admin/workflow/${workflowId}/crop?paper_name=${encodeURIComponent(paperName)}`, {
     method: 'POST',
