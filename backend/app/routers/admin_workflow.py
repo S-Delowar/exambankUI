@@ -194,17 +194,17 @@ async def crop_images_endpoint(
         raise HTTPException(404, "Workflow not found")
     
     try:
-        # Use uploaded file or selected PDF from workflow
+        # Always crop from the original PDF — it has annotation metadata
+        # (SQUARE, INK, POLYGON) intact. Each cropped image is denoised
+        # before saving so the output is clean.
         if file and file.filename:
-            # Validate file
             if not file.filename.lower().endswith('.pdf'):
                 raise HTTPException(400, "Only PDF files accepted")
             pdf_bytes = await file.read()
         else:
-            # Use selected PDF from workflow
-            pdf_path = Path(workflow.selected_pdf_path)
+            pdf_path = Path(workflow.original_pdf_path)
             if not pdf_path.exists():
-                raise HTTPException(404, "Selected PDF not found")
+                raise HTTPException(404, "Original PDF not found")
             pdf_bytes = pdf_path.read_bytes()
         
         # Crop images
@@ -225,6 +225,7 @@ async def crop_images_endpoint(
             "crop_folder": result["crop_folder"],
             "pages_with_figures": result["pages_with_figures"],
             "total_figures": result["total_figures"],
+            "pages_processed": result["pages_processed"],
             "next_step": "extract"
         }
     except Exception as e:
@@ -266,11 +267,10 @@ async def extract_questions_endpoint(
     _: User = Depends(require_admin)
 ):
     """Step 5: Extract questions from selected PDF."""
-    settings = get_settings()
     workflow = await db.get(ExtractionWorkflow, workflow_id)
     if not workflow:
         raise HTTPException(404, "Workflow not found")
-    
+
     try:
         # Read selected PDF
         pdf_bytes = Path(workflow.selected_pdf_path).read_bytes()
@@ -293,7 +293,6 @@ async def extract_questions_endpoint(
                 question_type=question_type,
                 subjects=subjects_tuple,
                 subject_paper=subject_paper,
-                settings=settings
             )
         )
         

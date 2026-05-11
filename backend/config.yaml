@@ -2,7 +2,7 @@ gemini_model: "gemini-3-flash-preview"
 request_pause_seconds: 2.0
 output_dir: "./data/results"
 render_dpi: 200
-max_pages: 15
+max_pages: 60
 tail_context_chars: 600
 max_upload_mb: 50
 

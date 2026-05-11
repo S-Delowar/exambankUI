@@ -41,7 +41,6 @@ export function CropStep({ workflowId, pdfUrl, onComplete, onSkip }: CropStepPro
       const paperName = filename.replace('.pdf', '');
       const data = await cropImages(workflowId, null, paperName);
       setResult(data);
-      setTimeout(() => onComplete(), 1500);
     } catch (err: any) {
       setError(err.message || 'Cropping failed');
     } finally {
@@ -77,28 +76,41 @@ export function CropStep({ workflowId, pdfUrl, onComplete, onSkip }: CropStepPro
         </div>
       )}
 
-      {result && (
-        <div className="mb-4 p-4 bg-green-50 border border-green-200 rounded-lg text-green-700">
-          ✓ Successfully cropped {result.total_figures} figure(s) from {result.pages_with_figures} page(s)
+      {result ? (
+        <div className="space-y-4">
+          <div className="p-4 bg-green-50 border border-green-200 rounded-lg text-green-700">
+            <p className="font-medium">
+              Successfully cropped {result.total_figures} figure(s) from {result.pages_with_figures} page(s)
+              {result.pages_processed != null && ` (${result.pages_processed} pages processed)`}
+            </p>
+          </div>
+          <div className="flex justify-end">
+            <button
+              onClick={onComplete}
+              className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 font-medium"
+            >
+              Continue to Extraction
+            </button>
+          </div>
+        </div>
+      ) : (
+        <div className="flex justify-between items-center">
+          <button
+            onClick={onSkip}
+            disabled={cropping}
+            className="px-6 py-3 text-gray-600 hover:text-gray-800 disabled:opacity-50"
+          >
+            Skip Cropping
+          </button>
+          <button
+            onClick={handleCrop}
+            disabled={cropping}
+            className="px-8 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:bg-gray-300 font-medium text-lg"
+          >
+            {cropping ? 'Cropping...' : 'Crop Images'}
+          </button>
         </div>
       )}
-
-      <div className="flex justify-between">
-        <button
-          onClick={onSkip}
-          disabled={cropping}
-          className="px-6 py-3 text-gray-600 hover:text-gray-800 disabled:opacity-50"
-        >
-          Skip Cropping
-        </button>
-        <button
-          onClick={handleCrop}
-          disabled={cropping}
-          className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:bg-gray-300"
-        >
-          {cropping ? 'Cropping...' : 'Crop Images'}
-        </button>
-      </div>
     </div>
   );
 }

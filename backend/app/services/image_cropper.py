@@ -80,6 +80,24 @@ def deduplicate_boxes(boxes: list, iou_threshold: float) -> list:
     return merged
 
 
+def clean_crop(crop_bgr: np.ndarray) -> np.ndarray:
+    """Denoise a cropped image using the same pipeline as pdf_cleaner.
+
+    Steps: grayscale → bilateral filter → adaptive threshold → back to BGR.
+    This runs after recolor_marker_to_white so annotation pixels are already
+    gone and don't interfere with the binarisation.
+    """
+    gray = cv2.cvtColor(crop_bgr, cv2.COLOR_BGR2GRAY)
+    denoised = cv2.bilateralFilter(gray, 9, 75, 75)
+    clean = cv2.adaptiveThreshold(
+        denoised, 255,
+        cv2.ADAPTIVE_THRESH_GAUSSIAN_C,
+        cv2.THRESH_BINARY,
+        21, 15,
+    )
+    return cv2.cvtColor(clean, cv2.COLOR_GRAY2BGR)
+
+
 def recolor_marker_to_white(crop_bgr: np.ndarray) -> np.ndarray:
     """Replace red/green/magenta annotation pixels with white."""
     hsv = cv2.cvtColor(crop_bgr, cv2.COLOR_BGR2HSV)
@@ -158,6 +176,7 @@ def crop_and_save(img: np.ndarray, boxes: list, out_dir: Path) -> int:
             continue
         crop = img[y0:y1, x0:x1]
         crop = recolor_marker_to_white(crop)
+        crop = clean_crop(crop)
         cv2.imwrite(str(out_dir / f"image{i}.png"), crop)
         saved += 1
     return saved
@@ -198,10 +217,10 @@ def crop_pdf_images(
     for page_idx, page in enumerate(doc, start=1):
         boxes = boxes_from_annotations(page, DPI)
         boxes = deduplicate_boxes(boxes, DEDUP_IOU)
-        
+
         if not boxes:
             continue
-        
+
         img = render_page(page, DPI)
         page_dir = crop_folder / f"page_{page_idx}"
         count = crop_and_save(img, boxes, page_dir)

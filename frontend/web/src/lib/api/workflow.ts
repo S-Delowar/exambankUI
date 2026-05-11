@@ -48,11 +48,14 @@ export async function useOriginal(workflowId: string) {
 }
 
 export async function cropImages(workflowId: string, file: File | null, paperName: string) {
-  const formData = new FormData();
+  const options: RequestInit = { method: 'POST' };
+
   if (file) {
+    const formData = new FormData();
     formData.append('file', file);
+    options.body = formData;
   }
-  
+
   return request<{
     workflow_id: string;
     crop_folder: string;
@@ -60,10 +63,7 @@ export async function cropImages(workflowId: string, file: File | null, paperNam
     total_figures: number;
     pages_processed: number;
     next_step: string;
-  }>(`/admin/workflow/${workflowId}/crop?paper_name=${encodeURIComponent(paperName)}`, {
-    method: 'POST',
-    body: formData,
-  });
+  }>(`/admin/workflow/${workflowId}/crop?paper_name=${encodeURIComponent(paperName)}`, options);
 }
 
 export async function extractQuestions(
