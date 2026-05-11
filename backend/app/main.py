@@ -32,6 +32,8 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "http://localhost:3000",
+        "http://192.168.0.101:3000",
+        "http://10.199.90.80:3000",
         "https://exambank-ui.vercel.app",
     ],
     allow_credentials=True,
