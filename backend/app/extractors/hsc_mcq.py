@@ -17,6 +17,7 @@ from ..gemini_client import GeminiExtractor
 from ..jobs import job_store
 from ..prompts import get_prompt
 from ..schemas import HscMcqPageExtraction, HscMcqPdfExtraction
+from ..schemas.uddipok import Uddipok
 from ._common import backfill_metadata, latch_metadata, stamp_fixed, stamp_image_page_index
 
 logger = logging.getLogger(__name__)
@@ -40,6 +41,7 @@ async def run(
     total = len(images)
 
     all_questions = []
+    all_uddipoks: dict[str, Uddipok] = {}  # temp_id → Uddipok, deduped
     prev_tail = ""
     prev_incomplete = False
     known: dict[str, object | None] = {k: None for k in _LATCH_KEYS}
@@ -68,6 +70,13 @@ async def run(
                 {"subject": subjects[0], "subject_paper": subject_paper},
             )
 
+        # Accumulate uddipoks from each page, deduplicating by temp ID.
+        for u in page.uddipoks:
+            if u.uddipok_id not in all_uddipoks:
+                all_uddipoks[u.uddipok_id] = u
+        # Stamp page_index on uddipok images so the image linker can bucket them.
+        stamp_image_page_index(page.uddipoks, page_index=i)
+
         stamp_image_page_index(page.questions, page_index=i)
         all_questions.extend(page.questions)
         latch_metadata(known, page.questions, _LATCH_KEYS)
@@ -92,5 +101,6 @@ async def run(
     return HscMcqPdfExtraction(
         source_filename=filename,
         page_count=total,
+        uddipoks=list(all_uddipoks.values()),
         questions=all_questions,
     )

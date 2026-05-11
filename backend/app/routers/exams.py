@@ -12,7 +12,7 @@ from fastapi import APIRouter, Depends, HTTPException, Query
 from fastapi.responses import FileResponse
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from ..api_schemas import ExamListOut, ExamPaperDetail
+from ..schemas.api import ExamListOut, ExamPaperDetail
 from ..config import get_settings
 from ..database import get_session
 from ..models import ExamPaper

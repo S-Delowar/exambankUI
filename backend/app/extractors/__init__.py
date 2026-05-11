@@ -18,14 +18,32 @@ import logging
 from .. import checkpoints
 from ..config import get_settings
 from ..db_storage import save_extraction_to_db
-from ..image_linker import link_questions_to_cropped_images, resolve_crop_folder
+from ..image_processing.linker import link_questions_to_cropped_images, resolve_crop_folder
 from ..jobs import job_store
-from ..pdf_utils import render_pdf_to_images
+from ..pdf.rendering import render_pdf_to_images
 from ..schemas import ExamType, QuestionType
 from ..storage import resolve_output_path, save_result, save_source_pdf
 from . import admission_mcq, admission_written, hsc_mcq, hsc_written
 
 logger = logging.getLogger(__name__)
+
+
+async def _update_workflow(workflow_id: str, paper_id: str) -> None:
+    """Mark the extraction workflow as completed and link it to the paper."""
+    import uuid
+
+    from ..database import SessionLocal
+    from ..models import ExtractionWorkflow
+
+    wf_uuid = uuid.UUID(workflow_id)
+    paper_uuid = uuid.UUID(str(paper_id))
+    async with SessionLocal() as session:
+        async with session.begin():
+            workflow = await session.get(ExtractionWorkflow, wf_uuid)
+            if workflow is not None:
+                workflow.paper_id = paper_uuid
+                workflow.current_step = "complete"
+                workflow.status = "completed"
 
 
 async def run_extraction(
@@ -37,6 +55,7 @@ async def run_extraction(
     question_type: QuestionType,
     subjects: tuple[str, ...],
     subject_paper: str | None = None,
+    workflow_id: str | None = None,
 ) -> None:
     settings = get_settings()
     try:
@@ -120,8 +139,14 @@ async def run_extraction(
             )
         else:
             try:
+                # Link question-level images (and option images via bare-token matching).
+                # For HSC extractions, also treat uddipoks as pseudo-questions so their
+                # [IMAGE_N] stubs get the same linking treatment.
+                linkable = list(result.questions)
+                if hasattr(result, "uddipoks"):
+                    linkable.extend(result.uddipoks)
                 bound = link_questions_to_cropped_images(
-                    questions=result.questions,
+                    questions=linkable,
                     paper_stem=paper_stem,
                     crops_root=crop_folder,
                     images_root=settings.images_path,
@@ -164,6 +189,16 @@ async def run_extraction(
             logger.info("Job %s persisted to DB as paper %s", job_id, paper_id)
         except Exception:
             logger.exception("Job %s: DB save failed; JSON saved at %s", job_id, out_path)
+
+        # Link workflow → paper so admins can trace results back.
+        if workflow_id and paper_id:
+            try:
+                await _update_workflow(workflow_id, paper_id)
+            except Exception:
+                logger.exception(
+                    "Job %s: failed to update workflow %s with paper_id",
+                    job_id, workflow_id,
+                )
 
         await job_store.mark_done(
             job_id, str(out_path), paper_id=str(paper_id) if paper_id else None

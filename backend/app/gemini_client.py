@@ -43,6 +43,19 @@ def _is_quota_error(exc: BaseException) -> bool:
     return False
 
 
+def _is_overloaded_error(exc: BaseException) -> bool:
+    """True for 503 / 'model is overloaded' / SERVICE_UNAVAILABLE — free tier
+    capacity limit. Needs longer backoff than transient errors."""
+    if isinstance(exc, genai_errors.APIError):
+        code = getattr(exc, "code", None)
+        if code == 503:
+            return True
+        msg = str(exc).lower()
+        if "overloaded" in msg or "high demand" in msg or "unavailable" in msg:
+            return True
+    return False
+
+
 class GeminiExtractor:
     def __init__(self, settings: Settings):
         self._settings = settings
@@ -136,7 +149,8 @@ class GeminiExtractor:
         label: str,
     ) -> T:
         last_err: Exception | None = None
-        attempt = 0  # transient-error attempts (capped at 2)
+        attempt = 0          # transient-error attempts (capped at 2)
+        overload_attempt = 0  # overloaded/503 attempts (capped at 4, longer backoff)
         while True:
             try:
                 response = await asyncio.to_thread(
@@ -147,7 +161,7 @@ class GeminiExtractor:
                 )
                 candidate = response.candidates[0] if response.candidates else None
                 finish_reason = getattr(candidate, "finish_reason", None)
-                if finish_reason and str(finish_reason).endswith("MAX_TOKENS"):
+                if finish_reason and finish_reason.name == "MAX_TOKENS":
                     raise _TruncationError(
                         f"Gemini hit max_output_tokens for {label}. "
                         f"Response truncated at ~{len(response.text or '')} chars. "
@@ -171,12 +185,32 @@ class GeminiExtractor:
                         e,
                     )
                     if self._rotate_key():
-                        # Don't burn a transient-retry slot on a quota error.
                         continue
                     raise _AllKeysExhausted(
                         f"All {len(self._keys)} Gemini API keys hit quota "
                         f"errors while processing {label}."
                     ) from e
+
+                if _is_overloaded_error(e):
+                    overload_attempt += 1
+                    # Exponential backoff: 30s, 60s, 120s, 240s
+                    delay = 30 * (2 ** (overload_attempt - 1))
+                    logger.warning(
+                        "Gemini overloaded for %s (attempt %d/4), retrying in %ds: %s",
+                        label,
+                        overload_attempt,
+                        delay,
+                        e,
+                    )
+                    if overload_attempt >= 4:
+                        raise RuntimeError(
+                            f"Gemini still overloaded after 4 attempts for {label}. "
+                            f"Try again later or switch to a stable model (gemini-2.5-flash)."
+                        ) from e
+                    await asyncio.sleep(delay)
+                    continue
+
+                # Generic transient error
                 last_err = e
                 attempt += 1
                 logger.warning(

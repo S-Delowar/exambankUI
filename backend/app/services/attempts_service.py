@@ -18,7 +18,7 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.orm import selectinload
 
 from ..config import get_settings
-from ..api_schemas import (
+from ..schemas.api import (
     OptionOut,
     PublicMcqQuestionOut,
     QuizQuestionsOut,
@@ -34,7 +34,7 @@ from ..models import (
     User,
 )
 from .questions_service import _images_to_out
-from ..schemas_user_data import (
+from ..schemas.user_data import (
     AdminAttemptDetail,
     AttemptAnswerRecord,
     AttemptBreakdown,

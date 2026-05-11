@@ -10,6 +10,7 @@ from .shared import (
     format_scoped_taxonomy,
     format_subjects_list,
 )
+from .subject_addendums import SUBJECT_ADDENDUMS
 
 
 _TEMPLATE = """You are an expert extractor of WRITTEN (short-answer / essay / derivation) questions from scanned pages of Bangladeshi public-university admission-test question papers. Pages may contain English, Bangla, or both.
@@ -48,7 +49,7 @@ DO NOT EXTRACT
 
 @lru_cache(maxsize=32)
 def build_system_prompt(subjects: tuple[str, ...]) -> str:
-    return _TEMPLATE.format(
+    prompt = _TEMPLATE.format(
         declared_subjects=format_subjects_list(subjects),
         taxonomy_block=format_scoped_taxonomy(subjects, subject_paper=None),
         math_chemistry=MATH_CHEMISTRY_BLOCK,
@@ -56,6 +57,12 @@ def build_system_prompt(subjects: tuple[str, ...]) -> str:
         stitching=STITCHING_BLOCK,
         format_block=FORMAT_BLOCK,
     )
+
+    for subj in subjects:
+        if subj in SUBJECT_ADDENDUMS:
+            prompt += "\n\n" + SUBJECT_ADDENDUMS[subj]
+
+    return prompt
 
 
 def build_user_prompt(

@@ -101,21 +101,28 @@ async def sample_questions(
     count: int,
     subject_paper: str | None = None,
 ) -> list[Any]:
-    _validate_taxonomy(subject, chapter, subject_paper)
-    model = _mcq_model_for(exam_type)
-
-    stmt = (
-        select(model)
-        .options(selectinload(model.options))
-        .where(model.subject == subject)
-        .where(model.chapter == chapter)
-        .where(model.correct_answer.is_not(None))
+    """Two-step random sample: pick IDs with lightweight random sort, then
+    fetch full rows by PK (indexed). Avoids loading all columns during the
+    random scan, which matters once tables exceed ~100k rows."""
+    ids = await sample_question_ids(
+        session,
+        exam_type=exam_type,
+        subject=subject,
+        chapter=chapter,
+        count=count,
+        subject_paper=subject_paper,
     )
-    if exam_type == "hsc_board" and subject_paper is not None:
-        stmt = stmt.where(model.subject_paper == subject_paper)
-    stmt = stmt.order_by(func.random()).limit(count)
+    if not ids:
+        return []
 
-    rows = (await session.execute(stmt)).scalars().all()
+    model = _mcq_model_for(exam_type)
+    rows = (
+        await session.execute(
+            select(model)
+            .options(selectinload(model.options))
+            .where(model.id.in_(ids))
+        )
+    ).scalars().all()
 
     if exam_type == "admission_test":
         return [questions_service.admission_mcq_to_out(q) for q in rows]

@@ -2,9 +2,9 @@ from fastapi import APIRouter, Depends
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from ..database import get_session
-from ..deps import get_current_user
+from ..auth.deps import get_current_user
 from ..models import User
-from ..schemas_user_data import ProgressSummaryOut
+from ..schemas.user_data import ProgressSummaryOut
 from ..services import progress_service
 
 router = APIRouter(

@@ -37,10 +37,10 @@ Extract every complete multiple-choice question visible on this page into the pr
 UDDIPOKS (উদ্দীপক)
 Some questions are preceded by an UDDIPOK — a stimulus passage, scenario, or context paragraph that provides information for one or more questions. When you encounter an uddipok:
 1. Extract it into the `uddipoks` array with a unique ID like "UDDIPOK_1", "UDDIPOK_2", etc.
-2. Set `uddipok_id` on each question that references this uddipok
-3. If multiple questions share the same uddipok, use the SAME uddipok_id for all of them
-4. Apply MATH & CHEMISTRY formatting rules to uddipok text
-5. If the uddipok contains a figure/diagram, insert [IMAGE_N] token at the exact position
+2. Set `uddipok_id` on each question that references this uddipok.
+3. SHARING DETECTION: The uddipok text explicitly states which questions it applies to — look for phrasing like "নিচের উদ্দীপকটি পড়ে ২০ ও ২১ নং প্রশ্নের উত্তর দাও" ("Read the following uddipok and answer questions 20 and 21"). All referenced question numbers share the SAME uddipok_id. The instruction may be in Bangla or English but always names specific question numbers.
+4. Apply MATH & CHEMISTRY formatting rules to uddipok text.
+5. If the uddipok contains a figure/diagram, insert [IMAGE_N] token at the exact position.
 
 FIELDS PER UDDIPOK
 - uddipok_id: unique identifier like "UDDIPOK_1", "UDDIPOK_2"

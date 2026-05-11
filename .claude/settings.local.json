@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -m py_compile app/image_processing/__init__.py)",
+      "Bash(python -m py_compile app/image_processing/linker.py)",
+      "Bash(python -m py_compile app/image_processing/diagram_pass.py)",
+      "Bash(python -m py_compile app/image_extractor.py)",
+      "Bash(python -m py_compile app/image_linker.py)"
+    ]
+  }
+}

@@ -89,4 +89,8 @@ class HscMcqPageExtraction(BaseModel):
 class HscMcqPdfExtraction(BaseModel):
     source_filename: str
     page_count: int
+    uddipoks: list[Uddipok] = Field(
+        default_factory=list,
+        description="All unique uddipoks across the entire PDF, deduplicated by uddipok_id.",
+    )
     questions: list[HscMcqQuestion]

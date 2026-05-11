@@ -4,21 +4,23 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from .routers import (
-    admin_attempts,
-    admin_quizzes,
-    admin_workflow,
     attempts,
     auth,
     bookmarks,
-    crop,
     drill,
     exams,
-    extract,
     progress,
     questions,
-    review,
     stats,
     taxonomy,
+)
+from .routers.admin import (
+    attempts as admin_attempts,
+    crop as admin_crop,
+    extract as admin_extract,
+    quizzes as admin_quizzes,
+    review as admin_review,
+    workflow as admin_workflow,
 )
 
 logging.basicConfig(
@@ -47,18 +49,21 @@ async def health() -> dict:
     return {"status": "ok"}
 
 
-app.include_router(extract.router)
-app.include_router(crop.router)
-app.include_router(admin_workflow.router)
-app.include_router(questions.router)
+# Public routes
 app.include_router(auth.router)
 app.include_router(exams.router)
+app.include_router(questions.router)
 app.include_router(drill.router)
 app.include_router(bookmarks.router)
 app.include_router(attempts.router)
 app.include_router(progress.router)
-app.include_router(review.router)
 app.include_router(stats.router)
 app.include_router(taxonomy.router)
+
+# Admin routes
+app.include_router(admin_extract.router)
+app.include_router(admin_crop.router)
+app.include_router(admin_review.router)
+app.include_router(admin_workflow.router)
 app.include_router(admin_quizzes.router)
 app.include_router(admin_attempts.router)

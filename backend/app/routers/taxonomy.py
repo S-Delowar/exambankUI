@@ -10,7 +10,7 @@ from typing import Any
 from fastapi import APIRouter, Depends
 
 from ..config import get_settings
-from ..deps import get_current_user
+from ..auth.deps import get_current_user
 
 router = APIRouter(prefix="/taxonomy", tags=["taxonomy"])
 

@@ -10,6 +10,7 @@ from .shared import (
     format_scoped_taxonomy,
     format_subjects_list,
 )
+from .subject_addendums import SUBJECT_ADDENDUMS
 
 
 _TEMPLATE = """You are an expert extractor of MCQs from scanned pages of Bangladeshi public-university admission-test question banks. Pages may contain English, Bangla, or both. Pages come from CamScanner scans so expect some noise.
@@ -56,7 +57,7 @@ DO NOT EXTRACT
 def build_system_prompt(subjects: tuple[str, ...]) -> str:
     """Byte-stable per `subjects` tuple. Cache so each page of a PDF reuses the
     same string → Gemini prefix caching stays warm."""
-    return _TEMPLATE.format(
+    prompt = _TEMPLATE.format(
         declared_subjects=format_subjects_list(subjects),
         taxonomy_block=format_scoped_taxonomy(subjects, subject_paper=None),
         math_chemistry=MATH_CHEMISTRY_BLOCK,
@@ -64,6 +65,13 @@ def build_system_prompt(subjects: tuple[str, ...]) -> str:
         stitching=STITCHING_BLOCK,
         format_block=FORMAT_BLOCK,
     )
+
+    # Inject subject-specific addendums for all declared subjects.
+    for subj in subjects:
+        if subj in SUBJECT_ADDENDUMS:
+            prompt += "\n\n" + SUBJECT_ADDENDUMS[subj]
+
+    return prompt
 
 
 def build_user_prompt(

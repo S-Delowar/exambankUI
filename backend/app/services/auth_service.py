@@ -7,7 +7,7 @@ from sqlalchemy import func, select
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from ..models import RefreshToken, User
-from ..security import (
+from ..auth.security import (
     dummy_verify,
     encode_access_token,
     generate_refresh_token,

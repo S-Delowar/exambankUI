@@ -3,11 +3,11 @@ import uuid
 from fastapi import APIRouter, Depends, Query, Response, status
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from ..api_schemas import QuizQuestionsOut, QuizReviewOut
+from ..schemas.api import QuizQuestionsOut, QuizReviewOut
 from ..database import get_session
-from ..deps import get_current_user
+from ..auth.deps import get_current_user
 from ..models import User
-from ..schemas_user_data import (
+from ..schemas.user_data import (
     AttemptAnswerIn,
     AttemptAnswerOut,
     AttemptDetail,
@@ -17,7 +17,7 @@ from ..schemas_user_data import (
     AttemptStartOut,
 )
 from ..services import attempts_service
-from ..services.pdf_service import generate_attempt_pdf
+from ..pdf.reports import generate_attempt_pdf
 
 router = APIRouter(
     prefix="/attempts",

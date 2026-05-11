@@ -13,7 +13,7 @@ from sqlalchemy import func, select
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.orm import selectinload
 
-from ..api_schemas import (
+from ..schemas.api import (
     AdmissionMcqQuestionOut,
     AdmissionWrittenQuestionOut,
     HscMcqQuestionOut,

@@ -11,7 +11,7 @@ from typing import Any
 from sqlalchemy import func, select, union_all
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from ..api_schemas import ExamPaperDetail, ExamPaperSummary
+from ..schemas.api import ExamPaperDetail, ExamPaperSummary
 from ..models import (
     AdmissionMcqQuestion,
     AdmissionWrittenQuestion,

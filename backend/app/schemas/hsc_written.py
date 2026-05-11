@@ -1,10 +1,10 @@
 """HSC board written (creative question / সৃজনশীল) extraction schemas.
 
 Every HSC written question is a "creative question": a stimulus passage (উদ্দীপক,
-uddipak) followed by EXACTLY 4 sub-parts labelled (a), (b), (c), (d) with
-fixed marks 1, 2, 3, 4 respectively. The uddipak may contain an image — the
-model emits the literal `[IMAGE]` token at that position and flags
-`uddipak_has_image=true`.
+uddipak) followed by sub-parts. Two patterns exist:
+
+  - Most subjects: 4 sub-parts (a=1, b=2, c=3, d=4 marks, total 10)
+  - Mathematics:   3 sub-parts (a=2, b=4, c=4 marks, total 10)
 """
 
 from typing import Literal, Optional
@@ -17,11 +17,17 @@ from .uddipok import Uddipok
 
 class HscWrittenSubpart(BaseModel):
     label: Literal["a", "b", "c", "d"] = Field(
-        ..., description="Sub-part label; exactly one of a/b/c/d."
+        ..., description="Sub-part label; one of a/b/c (math) or a/b/c/d (other subjects)."
     )
-    marks: Literal[1, 2, 3, 4] = Field(
+    marks: int = Field(
         ...,
-        description="Marks for this sub-part. Fixed by HSC convention: a=1, b=2, c=3, d=4.",
+        ge=1,
+        le=10,
+        description=(
+            "Marks for this sub-part. Two patterns: "
+            "most subjects: a=1, b=2, c=3, d=4. "
+            "Mathematics: a=2, b=4, c=4."
+        ),
     )
     text: str = Field(
         ..., description="Sub-question text with math/chemistry/image rules applied."
@@ -46,10 +52,11 @@ class HscWrittenQuestion(BaseModel):
     sub_questions: list[HscWrittenSubpart] = Field(
         ...,
         description=(
-            "Exactly 4 sub-parts in order a, b, c, d with marks 1, 2, 3, 4. "
-            "Never emit fewer or more than 4."
+            "Sub-parts in order. Most subjects: 4 parts (a=1, b=2, c=3, d=4). "
+            "Mathematics: 3 parts (a=2, b=4, c=4). "
+            "Emit exactly 3 or 4 depending on subject."
         ),
-        min_length=4,
+        min_length=3,
         max_length=4,
     )
     images: list[QuestionImage] = Field(
@@ -94,8 +101,8 @@ class HscWrittenPageExtraction(BaseModel):
     last_question_incomplete: bool = Field(
         False,
         description=(
-            "True if the last question on this page does NOT have all 4 sub-parts "
-            "visible (uddipak only, or fewer than 4 sub-parts)."
+            "True if the last question on this page does NOT have all expected sub-parts "
+            "visible (3 for math, 4 for others). E.g., uddipak only, or fewer parts than expected."
         ),
     )
 
@@ -103,4 +110,8 @@ class HscWrittenPageExtraction(BaseModel):
 class HscWrittenPdfExtraction(BaseModel):
     source_filename: str
     page_count: int
+    uddipoks: list[Uddipok] = Field(
+        default_factory=list,
+        description="All unique uddipoks across the entire PDF, deduplicated by uddipok_id.",
+    )
     questions: list[HscWrittenQuestion]

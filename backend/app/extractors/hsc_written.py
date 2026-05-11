@@ -3,16 +3,15 @@
 Key differences vs MCQ runners:
   - Larger tail context (prompt instruction already accounts for multi-page
     creative questions; we also bump the effective tail char budget).
-  - Post-parse validation: every question must have exactly 4 sub-parts with
-    labels [a,b,c,d] and marks [1,2,3,4]. Malformed rows are dropped with a
-    logged warning — they don't poison the DB.
-  - `uddipak_has_image` is reconciled from the actual `[IMAGE]` marker in the
-    text so downstream code can rely on the flag even when the model forgets.
+  - Post-parse validation: sub-part shape must match one of two valid patterns:
+      Most subjects: 4 parts (a=1, b=2, c=3, d=4)
+      Mathematics:   3 parts (a=2, b=4, c=4)
+    Malformed rows are dropped with a logged warning.
+  - Uddipoks are accumulated across pages and deduplicated by temp ID.
 """
 
 import asyncio
 import logging
-import re
 
 from .. import checkpoints
 from ..config import Settings
@@ -20,6 +19,7 @@ from ..gemini_client import GeminiExtractor
 from ..jobs import job_store
 from ..prompts import get_prompt
 from ..schemas import HscWrittenPageExtraction, HscWrittenPdfExtraction, HscWrittenQuestion
+from ..schemas.uddipok import Uddipok
 from ._common import backfill_metadata, latch_metadata, stamp_fixed, stamp_image_page_index
 
 logger = logging.getLogger(__name__)
@@ -30,14 +30,19 @@ _LATCH_KEYS = ("board_name", "exam_year")
 # the next). 2x the MCQ tail budget gives the stitching prompt enough context.
 _TAIL_MULTIPLIER = 2
 
-_EXPECTED_LABELS = ("a", "b", "c", "d")
-_EXPECTED_MARKS = (1, 2, 3, 4)
+# Valid subpart patterns: (labels_tuple, marks_tuple)
+_VALID_SHAPES = {
+    # Most subjects: 4 subparts
+    (("a", "b", "c", "d"), (1, 2, 3, 4)),
+    # Mathematics: 3 subparts
+    (("a", "b", "c"), (2, 4, 4)),
+}
 
 
 def _validate_question(q: HscWrittenQuestion, question_index: int) -> bool:
     labels = tuple(sp.label for sp in q.sub_questions)
     marks = tuple(sp.marks for sp in q.sub_questions)
-    if labels != _EXPECTED_LABELS or marks != _EXPECTED_MARKS:
+    if (labels, marks) not in _VALID_SHAPES:
         logger.warning(
             "HSC written: dropping malformed question (qno=%s, labels=%s, marks=%s)",
             q.question_number,
@@ -48,12 +53,6 @@ def _validate_question(q: HscWrittenQuestion, question_index: int) -> bool:
     return True
 
 
-_IMAGE_TOKEN_RE = re.compile(r"\[IMAGE(?:_\d+)?\]")
-
-
-def _reconcile_uddipak_image_flag(q: HscWrittenQuestion) -> None:
-    """True if the uddipak contains any `[IMAGE]` or `[IMAGE_N]` token."""
-    q.uddipak_has_image = bool(_IMAGE_TOKEN_RE.search(q.uddipak_text))
 
 
 async def run(
@@ -73,6 +72,7 @@ async def run(
     tail_budget = settings.tail_context_chars * _TAIL_MULTIPLIER
 
     all_questions: list[HscWrittenQuestion] = []
+    all_uddipoks: dict[str, Uddipok] = {}  # temp_id → Uddipok, deduped
     prev_tail = ""
     prev_incomplete = False
     known: dict[str, object | None] = {k: None for k in _LATCH_KEYS}
@@ -100,8 +100,12 @@ async def run(
                 {"subject": subjects[0], "subject_paper": subject_paper},
             )
 
-        for q in page.questions:
-            _reconcile_uddipak_image_flag(q)
+        # Accumulate uddipoks from each page, deduplicating by temp ID.
+        for u in page.uddipoks:
+            if u.uddipok_id not in all_uddipoks:
+                all_uddipoks[u.uddipok_id] = u
+        # Stamp page_index on uddipok images so the image linker can bucket them.
+        stamp_image_page_index(page.uddipoks, page_index=i)
 
         valid = [q for idx, q in enumerate(page.questions) if _validate_question(q, idx)]
         stamp_image_page_index(valid, page_index=i)
@@ -128,5 +132,6 @@ async def run(
     return HscWrittenPdfExtraction(
         source_filename=filename,
         page_count=total,
+        uddipoks=list(all_uddipoks.values()),
         questions=all_questions,
     )

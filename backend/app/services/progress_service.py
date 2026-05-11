@@ -11,7 +11,7 @@ from sqlalchemy import Integer, distinct, func, select, text
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from ..models import AdmissionMcqQuestion, Attempt, AttemptAnswer
-from ..schemas_user_data import ChapterStat, ProgressSummaryOut, SubjectStat
+from ..schemas.user_data import ChapterStat, ProgressSummaryOut, SubjectStat
 
 # attempt_answers.question_id points at admission_mcq_questions.id — progress
 # stats are currently computed over admission-MCQ attempts only. Extending

@@ -1,16 +1,16 @@
 """HSC board written (creative question / সৃজনশীল) prompt.
 
-Every HSC written question has the creative-question shape:
-  <uddipak / stimulus>
-  (a) ... [1 mark]
-  (b) ... [2 marks]
-  (c) ... [3 marks]
-  (d) ... [4 marks]
+Two sub-part patterns exist:
 
-Always exactly 4 sub-parts. Uddipak may contain an image (diagram/graph/figure)
-marked with the literal `[IMAGE]` token. A single question frequently spans
-two pages — the stitching logic merges uddipak on page N with the sub-parts on
-page N+1.
+  Most subjects (physics, chemistry, biology, bangla, english):
+    <uddipak / stimulus>
+    (a) ... [1 mark]    (b) ... [2 marks]    (c) ... [3 marks]    (d) ... [4 marks]
+
+  Mathematics only:
+    <uddipak / stimulus>
+    (a) ... [2 marks]    (b) ... [4 marks]    (c) ... [4 marks]
+
+Uddipak may contain an image. A single question frequently spans two pages.
 """
 
 from functools import lru_cache
@@ -42,9 +42,17 @@ Extract every complete creative question visible on this page into the provided 
 SHAPE (CRITICAL — never deviate)
 Every creative question consists of:
   1. An UDDIPOK (উদ্দীপক) — a stimulus passage, scenario, figure, table, or graph at the top.
-  2. Exactly 4 sub-questions labelled (a), (b), (c), (d) below the uddipok, with fixed marks 1, 2, 3, 4.
-Even if the paper uses different labels (ক/খ/গ/ঘ, i/ii/iii/iv, 1/2/3/4), MAP them by position: first → "a"/1, second → "b"/2, third → "c"/3, fourth → "d"/4.
-Marks are ALWAYS 1/2/3/4 for a/b/c/d in that order, regardless of what's printed. If a question has fewer than 4 sub-parts or more than 4, DO NOT emit it — it's either malformed or a non-creative question.
+  2. Sub-questions below the uddipok. TWO valid patterns exist:
+
+  PATTERN A — Most subjects (physics, chemistry, biology, bangla, english):
+    4 sub-questions: (a)=1 mark, (b)=2 marks, (c)=3 marks, (d)=4 marks.
+
+  PATTERN B — Mathematics ONLY:
+    3 sub-questions: (a)=2 marks, (b)=4 marks, (c)=4 marks.
+
+Even if the paper uses different labels (ক/খ/গ/ঘ, i/ii/iii/iv, 1/2/3/4), MAP them by position: first → "a", second → "b", third → "c", fourth → "d" (if present).
+Use the correct marks for the subject: math gets 2/4/4, others get 1/2/3/4.
+If a question does not match either pattern, DO NOT emit it.
 
 UDDIPOKS
 Extract each uddipok into the `uddipoks` array with a unique ID like "UDDIPOK_1", "UDDIPOK_2", etc. Questions reference their uddipok via `uddipok_id`. If multiple questions share the same uddipok (rare but possible), use the SAME uddipok_id for all of them.
@@ -62,12 +70,19 @@ FIELDS PER QUESTION
 - subject_paper: "1" or "2". {paper_field_instruction}
 - question_number: as printed ("১", "1", "৭", etc.).
 - uddipok_id: reference to uddipok ID (e.g., "UDDIPOK_1"). Every written question has an uddipok.
-- sub_questions: array of EXACTLY 4 objects, in order a → b → c → d:
+- sub_questions: array of 3 or 4 objects depending on subject.
+  Most subjects (4 parts):
     [
       {{ "label": "a", "marks": 1, "text": "..." }},
       {{ "label": "b", "marks": 2, "text": "..." }},
       {{ "label": "c", "marks": 3, "text": "..." }},
       {{ "label": "d", "marks": 4, "text": "..." }}
+    ]
+  Mathematics (3 parts):
+    [
+      {{ "label": "a", "marks": 2, "text": "..." }},
+      {{ "label": "b", "marks": 4, "text": "..." }},
+      {{ "label": "c", "marks": 4, "text": "..." }}
     ]
   Apply MATH & CHEMISTRY rules to each text.
 
@@ -82,12 +97,12 @@ DO NOT EXTRACT
 - MCQ questions (they have option lists).
 - Solution, answer, or model-answer content — including ANY figure, diagram, graph, OR table that appears inside such a block. Nothing from a solution may leak into the output (no text, no `[IMAGE_N]` token, no inline markdown table, no `images[]` entry).
 - Section headers, page numbers.
-- Any question missing one or more of its 4 sub-parts — hold via the tail fields for stitching on the next page.
+- Any question missing one or more of its expected sub-parts (3 for math, 4 for others) — hold via the tail fields for stitching on the next page.
 
 {stitching}
 
 STITCHING NOTE FOR CREATIVE QUESTIONS
-It is COMMON for a creative question to span two pages: the uddipak and part of the sub-questions on page N, the remaining sub-questions on page N+1. When LAST_QUESTION_WAS_INCOMPLETE is true, use PREVIOUS_PAGE_TAIL as the start of the question (including the uddipak) and complete it with the sub-parts found on THIS page. Only emit the question when all 4 sub-parts are assembled.
+It is COMMON for a creative question to span two pages: the uddipak and part of the sub-questions on page N, the remaining sub-questions on page N+1. When LAST_QUESTION_WAS_INCOMPLETE is true, use PREVIOUS_PAGE_TAIL as the start of the question (including the uddipak) and complete it with the sub-parts found on THIS page. Only emit the question when all expected sub-parts are assembled (3 for mathematics, 4 for other subjects).
 
 {format_block}
 """

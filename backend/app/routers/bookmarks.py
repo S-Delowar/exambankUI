@@ -4,9 +4,9 @@ from fastapi import APIRouter, Depends, Query, Response, status
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from ..database import get_session
-from ..deps import get_current_user
+from ..auth.deps import get_current_user
 from ..models import User
-from ..schemas_user_data import BookmarkCreateIn, BookmarkListOut, BookmarkOut
+from ..schemas.user_data import BookmarkCreateIn, BookmarkListOut, BookmarkOut
 from ..services import bookmarks_service
 
 router = APIRouter(

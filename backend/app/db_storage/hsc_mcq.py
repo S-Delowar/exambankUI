@@ -1,10 +1,11 @@
-"""Persist an HSC-MCQ extraction into Postgres."""
+"""Persist an HSC-MCQ extraction into Postgres (uddipoks + questions + options)."""
 
 import uuid
 from pathlib import Path
 
 from ..database import SessionLocal
 from ..models import HscMcqOption, HscMcqQuestion
+from ..models.uddipok import Uddipok as UddipokModel
 from ..schemas import HscMcqPdfExtraction
 from ._common import build_exam_paper_row, serialize_images
 
@@ -29,7 +30,26 @@ async def save(
         async with session.begin():
             session.add(paper)
             await session.flush()
+
+            # Persist uddipoks and build temp_id → real UUID mapping.
+            uddipok_map: dict[str, uuid.UUID] = {}
+            for idx, u in enumerate(result.uddipoks):
+                uddipok = UddipokModel(
+                    paper_id=paper.id,
+                    text=u.text,
+                    has_image=u.has_image,
+                    images=serialize_images(u.images),
+                    sequence_number=idx + 1,
+                )
+                session.add(uddipok)
+                await session.flush()
+                uddipok_map[u.uddipok_id] = uddipok.id
+
             for q in result.questions:
+                # uddipok_id is nullable for HSC MCQ (not all questions have passages).
+                resolved_uddipok_id = (
+                    uddipok_map.get(q.uddipok_id) if q.uddipok_id else None
+                )
                 question = HscMcqQuestion(
                     paper_id=paper.id,
                     question_number=q.question_number,
@@ -40,6 +60,7 @@ async def save(
                     subject_paper=q.subject_paper,
                     chapter=q.chapter,
                     correct_answer=q.correct_answer,
+                    uddipok_id=resolved_uddipok_id,
                     images=serialize_images(q.images),
                 )
                 session.add(question)
