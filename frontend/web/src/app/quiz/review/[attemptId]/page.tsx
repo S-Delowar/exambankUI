@@ -282,10 +282,12 @@ function ReviewCard({
             </details>
           )}
           {q.gemini_solution && (
-            <details className="mt-3 group" open={!q.is_correct && !skipped}>
+            <details className="mt-3 group" open>
               <summary className="cursor-pointer text-xs uppercase tracking-wide text-blue-600 group-hover:text-blue-700 flex items-center gap-1">
-                <span>Gemini Solution</span>
-                <span className="text-[9px] px-1 py-0.5 rounded bg-blue-100 text-blue-700">AI</span>
+                <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                </svg>
+                <span>AI Solution</span>
               </summary>
               <div className="prose prose-sm max-w-none mt-2 text-slate-700 bg-blue-50/30 border border-blue-100 rounded-lg p-3">
                 <MathText

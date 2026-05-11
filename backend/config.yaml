@@ -1,5 +1,7 @@
+# gemini_model: "gemini-3-flash-preview"
 gemini_model: "gemini-3-flash-preview"
-request_pause_seconds: 2.0
+solution_model: "gemini-3-flash-preview"
+request_pause_seconds: 4.0
 output_dir: "./data/results"
 render_dpi: 200
 max_pages: 15

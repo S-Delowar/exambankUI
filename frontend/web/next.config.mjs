@@ -2,7 +2,9 @@
 const nextConfig = {
   reactStrictMode: true,
   // LAN access (uncomment to allow requests from other devices):
-  // allowedDevOrigins: ["192.168.0.103"],
+  allowedDevOrigins: ["192.168.0.101"],
+  // allowedDevOrigins: ["10.199.90.80"],
+
   // Expose the backend URL at build-time. Override per env with
   // NEXT_PUBLIC_API_BASE_URL=https://api.example.com in .env.local.
   env: {
